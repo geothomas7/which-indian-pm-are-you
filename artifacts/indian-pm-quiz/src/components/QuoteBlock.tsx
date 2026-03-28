@@ -2,9 +2,10 @@ import type { Quote } from "../types";
 
 interface QuoteBlockProps {
   quote: Quote;
+  pmName: string;
 }
 
-export function QuoteBlock({ quote }: QuoteBlockProps) {
+export function QuoteBlock({ quote, pmName }: QuoteBlockProps) {
   if (!quote.show) return null;
 
   return (
@@ -15,16 +16,7 @@ export function QuoteBlock({ quote }: QuoteBlockProps) {
       {quote.translation && (
         <p className="quiz-quote-translation">{quote.translation}</p>
       )}
-      <figcaption className="quiz-quote-source">
-        <a
-          href={quote.sourceUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="quiz-quote-source-link"
-        >
-          {quote.sourceTitle}
-        </a>
-      </figcaption>
+      <figcaption className="quiz-quote-attribution">— {pmName}</figcaption>
     </figure>
   );
 }

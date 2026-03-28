@@ -53,9 +53,11 @@ export function ResultCard({ result, onRetake }: ResultCardProps) {
         </div>
 
         <div className="quiz-result-content">
-          <p className="quiz-result-you">You are</p>
+          <p className="quiz-result-you">You are&hellip;</p>
           <h1 className="quiz-result-name">{result.winner.pm}</h1>
           <p className="quiz-result-subtitle">{resultData.subtitle}</p>
+
+          <hr className="quiz-result-divider" />
 
           {portraitSrc && (
             <div className="quiz-result-portrait">
@@ -95,7 +97,7 @@ export function ResultCard({ result, onRetake }: ResultCardProps) {
             </p>
           </div>
 
-          <QuoteBlock quote={resultData.quote} />
+          <QuoteBlock quote={resultData.quote} pmName={result.winner.pm} />
 
           {result.secondaryMatches.length > 0 && (
             <ScoreMixCard
