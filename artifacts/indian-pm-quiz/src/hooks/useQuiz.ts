@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect } from "react";
 import quizData from "../data/quiz.json";
 
 export type QuizScreen = "intro" | "question" | "result";
@@ -14,17 +14,33 @@ export interface QuizResult {
   secondaryMatches: PMScore[];
 }
 
-const STORAGE_KEY = "indian_pm_quiz_answers";
+const STORAGE_ANSWERS_KEY = "indian_pm_quiz_answers";
+const STORAGE_STATE_KEY = "indian_pm_quiz_state";
 const TIE_BREAKER_QUESTIONS = [1, 5, 10, 17, 18];
+
+interface PersistedState {
+  screen: QuizScreen;
+  currentIndex: number;
+}
 
 function loadSavedAnswers(): Record<number, string> {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(STORAGE_ANSWERS_KEY);
     if (raw) return JSON.parse(raw);
   } catch {
     // ignore
   }
   return {};
+}
+
+function loadSavedState(): PersistedState | null {
+  try {
+    const raw = localStorage.getItem(STORAGE_STATE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch {
+    // ignore
+  }
+  return null;
 }
 
 function computeScores(answers: Record<number, string>): PMScore[] {
@@ -87,8 +103,9 @@ function resolveResults(answers: Record<number, string>): QuizResult | null {
 }
 
 export function useQuiz() {
-  const [screen, setScreen] = useState<QuizScreen>("intro");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const savedState = loadSavedState();
+  const [screen, setScreen] = useState<QuizScreen>(savedState?.screen ?? "intro");
+  const [currentIndex, setCurrentIndex] = useState(savedState?.currentIndex ?? 0);
   const [answers, setAnswers] = useState<Record<number, string>>(loadSavedAnswers);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -100,11 +117,24 @@ export function useQuiz() {
 
   const saveAnswers = useCallback((newAnswers: Record<number, string>) => {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(newAnswers));
+      localStorage.setItem(STORAGE_ANSWERS_KEY, JSON.stringify(newAnswers));
     } catch {
       // ignore
     }
   }, []);
+
+  const saveState = useCallback((newScreen: QuizScreen, newIndex: number) => {
+    try {
+      const state: PersistedState = { screen: newScreen, currentIndex: newIndex };
+      localStorage.setItem(STORAGE_STATE_KEY, JSON.stringify(state));
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  useEffect(() => {
+    saveState(screen, currentIndex);
+  }, [screen, currentIndex, saveState]);
 
   const selectOption = useCallback(
     (option: string) => {
@@ -121,6 +151,7 @@ export function useQuiz() {
     setTimeout(() => {
       if (currentIndex + 1 >= totalQuestions) {
         setScreen("result");
+        setCurrentIndex(currentIndex);
       } else {
         setCurrentIndex((i) => i + 1);
       }
@@ -141,9 +172,16 @@ export function useQuiz() {
   }, [currentIndex]);
 
   const startQuiz = useCallback(() => {
+    const savedAnswers = loadSavedAnswers();
+    const answeredCount = Object.keys(savedAnswers).length;
+    if (answeredCount > 0 && answeredCount < totalQuestions) {
+      const resumeIndex = answeredCount < totalQuestions ? answeredCount : 0;
+      setCurrentIndex(resumeIndex);
+    } else {
+      setCurrentIndex(0);
+    }
     setScreen("question");
-    setCurrentIndex(0);
-  }, []);
+  }, [totalQuestions]);
 
   const retakeQuiz = useCallback(() => {
     const cleared: Record<number, string> = {};
@@ -151,6 +189,11 @@ export function useQuiz() {
     saveAnswers(cleared);
     setCurrentIndex(0);
     setScreen("intro");
+    try {
+      localStorage.removeItem(STORAGE_STATE_KEY);
+    } catch {
+      // ignore
+    }
   }, [saveAnswers]);
 
   const result = useMemo(() => {
@@ -158,7 +201,7 @@ export function useQuiz() {
     return resolveResults(answers);
   }, [screen, answers]);
 
-  const progressPercent = Math.round(((currentIndex) / totalQuestions) * 100);
+  const progressPercent = Math.round(((currentIndex + 1) / totalQuestions) * 100);
 
   return {
     screen,
