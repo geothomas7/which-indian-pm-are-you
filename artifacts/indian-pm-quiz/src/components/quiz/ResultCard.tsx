@@ -23,7 +23,7 @@ export function ResultCard({ result, onRetake }: ResultCardProps) {
 
   const portraitSrc =
     portrait?.imageEnabled && !portrait?.needsManualReview
-      ? `https://commons.wikimedia.org/wiki/Special:FilePath/${portrait.imageTitle}?width=240`
+      ? `https://commons.wikimedia.org/wiki/Special:FilePath/${portrait.imageTitle}?width=320`
       : null;
 
   const handleShare = async () => {
@@ -65,7 +65,7 @@ export function ResultCard({ result, onRetake }: ResultCardProps) {
                 src={portraitSrc}
                 alt={`Portrait of ${result.winner.pm}`}
                 className="quiz-portrait-img"
-                loading="lazy"
+                loading="eager"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).style.display = "none";
                 }}
