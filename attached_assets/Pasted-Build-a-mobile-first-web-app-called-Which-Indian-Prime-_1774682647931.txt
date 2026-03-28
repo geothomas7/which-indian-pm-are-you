@@ -1,0 +1,260 @@
+Build a mobile-first web app called “Which Indian Prime Minister Are You Most Like?”
+
+Goal:
+Create a clean, editorial-style personality quiz web app that feels thoughtful, polished, respectful, and lightly playful. It should work beautifully on mobile devices first, then scale cleanly to tablet and desktop.
+
+Core concept:
+This is a fun personality-style quiz based on broad leadership traits, not politics, not ideology, and not historical judgment. The app should match a user to one Indian Prime Minister based on their answers, then optionally show a few other close matches only if the scores are reasonably close.
+
+Important safety framing:
+Use respectful language throughout.
+Do not mock, insult, caricature, or make defamatory statements about any public figure.
+Do not imply that the user literally is a real public figure.
+Do not say the result is factual, political, or psychological truth.
+Frame everything as a playful personality match based on broad leadership style.
+Include clear disclaimers that this is for fun only and does not represent historical judgment, endorsement, or real-life similarity.
+
+Brand and design direction:
+Use a clean, minimal, editorial design inspired by modern quiz apps with restrained decoration.
+It should feel warm, intelligent, and premium.
+Do not make it look overly political.
+Do not use the Indian flag, Ashoka Chakra, state emblems, party symbols, or trademarked imagery.
+Do not use cliché “exotic India” visuals such as snake charmers, elephants, turbans, etc.
+Instead, use subtle India-inspired abstract design accents such as:
+- jaali-inspired line patterns
+- rangoli-like dot geometry
+- soft arch shapes
+- tile-border dividers
+- petal-like radial motifs
+Keep all decorative elements abstract, subtle, low-contrast, and tasteful.
+
+Visual style:
+Use this palette:
+- background: #F8F3EA
+- surface: #FFFDF9
+- text: #1F1D1A
+- muted text: #5E5A54
+- accent: #B7642B
+- accent soft: #F0D8C8
+- border: #DDD3C7
+- secondary accent: #2F5D62
+
+Typography:
+- Headings: Playfair Display
+- Body/UI: Inter
+
+UI style:
+- lots of white space
+- centered narrow content column
+- rounded cards
+- subtle borders
+- soft shadows
+- clean typography
+- no loud gradients
+- no visual clutter
+- no confetti
+- no meme aesthetics
+
+Mobile-first requirements:
+This app must be designed for phones first.
+Use a single-column layout on mobile.
+No horizontal scrolling.
+No tiny text.
+Buttons and answer cards must be easy to tap with one hand.
+Use large readable spacing and strong contrast.
+Use these rough breakpoints:
+- 0 to 479 px = small phones
+- 480 to 767 px = large phones
+- 768 to 1023 px = tablet
+- 1024+ px = desktop
+On desktop, keep the quiz in a narrow centered column so it still feels editorial.
+
+App screens:
+1. Landing page
+2. Question screen
+3. Result screen
+
+Landing page requirements:
+Show:
+- a small abstract decorative motif at the top
+- title: “Which Indian Prime Minister Are You Most Like?”
+- subtitle: “18 questions on leadership, values, decisions, and the kind of future you want to build.”
+- a short disclaimer
+- a primary “Start the Quiz” button
+Keep it elegant and minimal.
+
+Question screen requirements:
+- one question per screen
+- progress bar at top
+- question counter
+- question text
+- four answer cards
+- next button
+- optional back button
+- subtle transition between questions
+Do not auto-advance immediately after answer selection unless implemented very smoothly.
+Selected answer should highlight clearly.
+The “Next” button should activate only after an option is selected.
+
+Result screen requirements:
+Show:
+- decorative motif
+- large result title in the format: “You are Atal Bihari Vajpayee”
+- archetype subtitle
+- 2 short praise-focused paragraphs
+- strengths section
+- one gentle growth note
+- score card labeled “Your leadership mix” only if other PM matches are reasonably close
+- retake button
+- share button
+- disclaimer at bottom
+
+Score card rule:
+Show only one final PM result as the winner.
+Only show other PMs in “Your leadership mix” if:
+- they are within 3 points of the winner
+- and they have at least 6 total points
+If no one else qualifies, show only the winning PM and no extra mix card or show just a single-line note.
+
+Data architecture:
+Store the quiz content in local JSON.
+No database needed.
+No auth needed.
+Score client-side.
+Keep the app lightweight and easy to deploy.
+
+Suggested file structure:
+- src/components/QuizIntro.tsx
+- src/components/QuestionCard.tsx
+- src/components/AnswerOption.tsx
+- src/components/ProgressBar.tsx
+- src/components/ResultCard.tsx
+- src/components/ScoreMixCard.tsx
+- src/components/Disclaimer.tsx
+- src/data/quiz.json
+- src/styles/theme.css
+- src/App.tsx
+
+Tech direction:
+Use React with TypeScript.
+Use clean component structure.
+Use local state for quiz progress.
+Persist answers in localStorage so refreshing does not instantly lose progress.
+Use CSS variables for theming.
+Do not over-engineer.
+
+Use CSS variables like:
+--bg
+--surface
+--text
+--muted
+--accent
+--accent-soft
+--border
+--secondary
+--radius-card
+--radius-button
+--shadow-soft
+
+Interaction details:
+- soft fade or slide transitions between questions
+- animated progress bar
+- subtle hover states on desktop
+- clear selected states for answer cards
+- no excessive animations
+
+Accessibility:
+- proper button semantics
+- keyboard accessibility
+- visible focus states
+- strong color contrast
+- body text minimum 16px on mobile
+- tap targets at least 44px high, preferably 52px
+
+Disclaimers:
+Landing page disclaimer:
+“For fun and reflection only. This quiz is a light personality match based on broad leadership styles. It is not a historical, political, or factual assessment.”
+
+Result page disclaimer:
+“This result is a playful interpretation based on your answers. It is not a factual, political, or psychological assessment of you or any public figure.”
+
+Result language rules:
+Every result should be respectful and praise-forward.
+Use positive traits first.
+Use one gentle balancing note, never harsh criticism.
+Do not assign ideology, morality, religion, caste, or controversial real-world positions to the user.
+Frame each result as broad style and temperament only.
+
+Quiz content:
+Use 18 questions.
+Use four answer choices per question.
+Use the Indian Prime Minister result pool and scoring structure from the supplied quiz data.
+The winning PM should come from the computed score.
+The result pages should be driven from structured JSON data.
+
+Add these 15 possible PM outcomes:
+- Jawaharlal Nehru
+- Gulzarilal Nanda
+- Lal Bahadur Shastri
+- Indira Gandhi
+- Morarji Desai
+- Charan Singh
+- Rajiv Gandhi
+- V. P. Singh
+- Chandra Shekhar
+- P. V. Narasimha Rao
+- Atal Bihari Vajpayee
+- H. D. Deve Gowda
+- I. K. Gujral
+- Manmohan Singh
+- Narendra Modi
+
+Use a result-page structure like:
+- title
+- archetype
+- summary paragraph 1
+- summary paragraph 2
+- strengths array
+- gentleNote
+
+UI details:
+Landing page:
+- centered card or clean column
+- full-width CTA on mobile
+- abstract motif above title
+
+Question screen:
+- question number small
+- question text large and readable
+- answer cards stacked vertically
+- back and next controls near bottom
+- keep vertical spacing generous
+
+Result screen:
+- result title prominent
+- subtitle below
+- strengths shown as chips or short bullet list
+- score card as stacked rows, not a dense table
+- retake and share actions near bottom
+
+Share feature:
+Implement a simple share button.
+If native sharing is available, use it.
+Otherwise copy a short result line like:
+“I got Atal Bihari Vajpayee — The Consensus Leader”
+
+Output expectation:
+Generate the full front-end app scaffold and core UI.
+Create sample JSON structure for the quiz data.
+Create the theme.css file.
+Create responsive components.
+Use placeholder data if needed, but structure everything so real quiz JSON can be dropped in easily.
+
+Most important priorities:
+1. mobile-first UX
+2. clean premium design
+3. respectful tone
+4. safe disclaimers
+5. one winning PM result only
+6. optional close-match score card only when justified
+7. culturally rooted but subtle visual identity

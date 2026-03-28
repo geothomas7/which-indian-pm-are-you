@@ -1,0 +1,941 @@
+{
+  "metadata": {
+    "title": "Which Indian Prime Minister Are You Most Like?",
+    "distinct_prime_ministers": 15,
+    "question_count": 18,
+    "current_prime_minister": "Narendra Modi",
+    "scoring_model": "Each answer gives 2 points to a primary PM and 1 point to a related PM.",
+    "main_result_rule": "Show one winning PM only.",
+    "source_note": "Distinct prime minister list aligned to official Government of India rosters."
+  },
+  "display_rules": {
+    "show_secondary_matches_only_if_reasonably_close": true,
+    "within_points_of_winner": 3,
+    "minimum_total_points": 6,
+    "tie_breakers": [
+      "PM with more primary hits (2-point assignments) wins.",
+      "If still tied, compare points from questions 1, 5, 10, 17, and 18.",
+      "If still tied, choose the more flattering blend sentence, but keep only one final PM."
+    ]
+  },
+  "prime_ministers": [
+    "Jawaharlal Nehru",
+    "Gulzarilal Nanda",
+    "Lal Bahadur Shastri",
+    "Indira Gandhi",
+    "Morarji Desai",
+    "Charan Singh",
+    "Rajiv Gandhi",
+    "V. P. Singh",
+    "Chandra Shekhar",
+    "P. V. Narasimha Rao",
+    "Atal Bihari Vajpayee",
+    "H. D. Deve Gowda",
+    "I. K. Gujral",
+    "Manmohan Singh",
+    "Narendra Modi"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "The country is going through a hard time. What do you do first?",
+      "A": "Speak to the people and try to give them hope.",
+      "B": "Take quick action and show strong control.",
+      "C": "Talk to different people and build agreement first.",
+      "D": "Use the moment to inspire people with a bigger goal."
+    },
+    {
+      "id": 2,
+      "question": "What makes a leader’s speech powerful?",
+      "A": "A strong idea for the future.",
+      "B": "Clear steps and firm direction.",
+      "C": "Careful thinking and balance.",
+      "D": "Words that make people feel proud and united."
+    },
+    {
+      "id": 3,
+      "question": "A big change is needed, but many people may not like it at first. What do you do?",
+      "A": "Go ahead if it will help the country in the long run.",
+      "B": "Bring it in slowly so people can adjust.",
+      "C": "First get support from others before acting.",
+      "D": "Explain it as part of a bigger plan for the country."
+    },
+    {
+      "id": 4,
+      "question": "Which criticism would upset you the most?",
+      "A": "“You had no big ideas.”",
+      "B": "“You were weak when things got difficult.”",
+      "C": "“You did not listen to others.”",
+      "D": "“You moved too slowly.”"
+    },
+    {
+      "id": 5,
+      "question": "What kind of legacy would you want most?",
+      "A": "Building strong national institutions.",
+      "B": "Growing the economy and creating new chances.",
+      "C": "Making people feel proud of the nation.",
+      "D": "Keeping the country steady in difficult times."
+    },
+    {
+      "id": 6,
+      "question": "When choosing your team, what matters most?",
+      "A": "Skill and knowledge.",
+      "B": "Loyalty and discipline.",
+      "C": "Bringing in different groups and viewpoints.",
+      "D": "Energy and bold thinking."
+    },
+    {
+      "id": 7,
+      "question": "How should India deal with powerful other countries?",
+      "A": "Stay independent and think long term.",
+      "B": "Make practical deals that help India.",
+      "C": "Show strength so India is respected.",
+      "D": "Build partnerships that help national growth."
+    },
+    {
+      "id": 8,
+      "question": "How should a leader deal with people who disagree?",
+      "A": "Let them speak, even if it is difficult.",
+      "B": "Listen, but do not let them stop progress.",
+      "C": "Accept helpful criticism, but stop harmful disorder.",
+      "D": "Answer them openly and win the argument."
+    },
+    {
+      "id": 9,
+      "question": "Which line sounds most like you?",
+      "A": "I like building systems that last.",
+      "B": "I like getting things done fast.",
+      "C": "I like connecting with large numbers of people.",
+      "D": "I like thinking deeply before acting."
+    },
+    {
+      "id": 10,
+      "question": "The economy is weak. What is your first focus?",
+      "A": "Long-term reforms.",
+      "B": "Help for ordinary people right away.",
+      "C": "Big development projects people can see.",
+      "D": "Better planning and smoother government work."
+    },
+    {
+      "id": 11,
+      "question": "How do you make tough decisions?",
+      "A": "I think deeply and ask others for advice.",
+      "B": "I decide quickly and trust my judgment.",
+      "C": "I look at facts and expert views.",
+      "D": "I think about what the public will support."
+    },
+    {
+      "id": 12,
+      "question": "What holds a country together best?",
+      "A": "Strong democratic institutions.",
+      "B": "Shared culture and identity.",
+      "C": "Equal chance to grow and succeed.",
+      "D": "Working together for a common goal."
+    },
+    {
+      "id": 13,
+      "question": "People are demanding fast social change. What do you do?",
+      "A": "Support change, but through proper systems.",
+      "B": "Lead the change boldly.",
+      "C": "Move carefully so the country does not split.",
+      "D": "Keep order and accept only what is practical."
+    },
+    {
+      "id": 14,
+      "question": "Which quality matters most in leadership?",
+      "A": "Vision",
+      "B": "Discipline",
+      "C": "Practical thinking",
+      "D": "Charisma"
+    },
+    {
+      "id": 15,
+      "question": "What would your critics most likely say?",
+      "A": "You dream too much.",
+      "B": "You control too much.",
+      "C": "You are too careful.",
+      "D": "You think too much about politics."
+    },
+    {
+      "id": 16,
+      "question": "In a national crisis, what do you rely on most?",
+      "A": "My beliefs and values.",
+      "B": "Firm control and order.",
+      "C": "Public trust.",
+      "D": "Support from many groups."
+    },
+    {
+      "id": 17,
+      "question": "Which national goal excites you most?",
+      "A": "Building a modern and strong state.",
+      "B": "Helping ordinary people live better.",
+      "C": "Making the nation more confident and united.",
+      "D": "Changing old systems to help growth."
+    },
+    {
+      "id": 18,
+      "question": "What is the main job of a prime minister?",
+      "A": "Show the country where to go.",
+      "B": "Run the government well.",
+      "C": "Represent the hopes of the people.",
+      "D": "Keep different forces in balance."
+    }
+  ],
+  "scoring_matrix": [
+    {
+      "question_id": 1,
+      "option": "A",
+      "answer_text": "Speak to the people and try to give them hope.",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "Lal Bahadur Shastri",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 1,
+      "option": "B",
+      "answer_text": "Take quick action and show strong control.",
+      "primary_pm": "Indira Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "Narendra Modi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 1,
+      "option": "C",
+      "answer_text": "Talk to different people and build agreement first.",
+      "primary_pm": "Atal Bihari Vajpayee",
+      "primary_points": 2,
+      "secondary_pm": "I. K. Gujral",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 1,
+      "option": "D",
+      "answer_text": "Use the moment to inspire people with a bigger goal.",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "Rajiv Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 2,
+      "option": "A",
+      "answer_text": "A strong idea for the future.",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "Rajiv Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 2,
+      "option": "B",
+      "answer_text": "Clear steps and firm direction.",
+      "primary_pm": "Indira Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "Morarji Desai",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 2,
+      "option": "C",
+      "answer_text": "Careful thinking and balance.",
+      "primary_pm": "Manmohan Singh",
+      "primary_points": 2,
+      "secondary_pm": "I. K. Gujral",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 2,
+      "option": "D",
+      "answer_text": "Words that make people feel proud and united.",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "Atal Bihari Vajpayee",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 3,
+      "option": "A",
+      "answer_text": "Go ahead if it will help the country in the long run.",
+      "primary_pm": "P. V. Narasimha Rao",
+      "primary_points": 2,
+      "secondary_pm": "Manmohan Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 3,
+      "option": "B",
+      "answer_text": "Bring it in slowly so people can adjust.",
+      "primary_pm": "Manmohan Singh",
+      "primary_points": 2,
+      "secondary_pm": "H. D. Deve Gowda",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 3,
+      "option": "C",
+      "answer_text": "First get support from others before acting.",
+      "primary_pm": "Atal Bihari Vajpayee",
+      "primary_points": 2,
+      "secondary_pm": "I. K. Gujral",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 3,
+      "option": "D",
+      "answer_text": "Explain it as part of a bigger plan for the country.",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "Jawaharlal Nehru",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 4,
+      "option": "A",
+      "answer_text": "“You had no big ideas.”",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "Rajiv Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 4,
+      "option": "B",
+      "answer_text": "“You were weak when things got difficult.”",
+      "primary_pm": "Indira Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "Chandra Shekhar",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 4,
+      "option": "C",
+      "answer_text": "“You did not listen to others.”",
+      "primary_pm": "Atal Bihari Vajpayee",
+      "primary_points": 2,
+      "secondary_pm": "I. K. Gujral",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 4,
+      "option": "D",
+      "answer_text": "“You moved too slowly.”",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "Rajiv Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 5,
+      "option": "A",
+      "answer_text": "Building strong national institutions.",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "Gulzarilal Nanda",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 5,
+      "option": "B",
+      "answer_text": "Growing the economy and creating new chances.",
+      "primary_pm": "Manmohan Singh",
+      "primary_points": 2,
+      "secondary_pm": "P. V. Narasimha Rao",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 5,
+      "option": "C",
+      "answer_text": "Making people feel proud of the nation.",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "Atal Bihari Vajpayee",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 5,
+      "option": "D",
+      "answer_text": "Keeping the country steady in difficult times.",
+      "primary_pm": "Lal Bahadur Shastri",
+      "primary_points": 2,
+      "secondary_pm": "I. K. Gujral",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 6,
+      "option": "A",
+      "answer_text": "Skill and knowledge.",
+      "primary_pm": "Manmohan Singh",
+      "primary_points": 2,
+      "secondary_pm": "Jawaharlal Nehru",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 6,
+      "option": "B",
+      "answer_text": "Loyalty and discipline.",
+      "primary_pm": "Indira Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "Morarji Desai",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 6,
+      "option": "C",
+      "answer_text": "Bringing in different groups and viewpoints.",
+      "primary_pm": "Atal Bihari Vajpayee",
+      "primary_points": 2,
+      "secondary_pm": "H. D. Deve Gowda",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 6,
+      "option": "D",
+      "answer_text": "Energy and bold thinking.",
+      "primary_pm": "Rajiv Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "Narendra Modi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 7,
+      "option": "A",
+      "answer_text": "Stay independent and think long term.",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "I. K. Gujral",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 7,
+      "option": "B",
+      "answer_text": "Make practical deals that help India.",
+      "primary_pm": "P. V. Narasimha Rao",
+      "primary_points": 2,
+      "secondary_pm": "Manmohan Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 7,
+      "option": "C",
+      "answer_text": "Show strength so India is respected.",
+      "primary_pm": "Indira Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "Narendra Modi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 7,
+      "option": "D",
+      "answer_text": "Build partnerships that help national growth.",
+      "primary_pm": "Manmohan Singh",
+      "primary_points": 2,
+      "secondary_pm": "Rajiv Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 8,
+      "option": "A",
+      "answer_text": "Let them speak, even if it is difficult.",
+      "primary_pm": "I. K. Gujral",
+      "primary_points": 2,
+      "secondary_pm": "Atal Bihari Vajpayee",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 8,
+      "option": "B",
+      "answer_text": "Listen, but do not let them stop progress.",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "P. V. Narasimha Rao",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 8,
+      "option": "C",
+      "answer_text": "Accept helpful criticism, but stop harmful disorder.",
+      "primary_pm": "Indira Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "Morarji Desai",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 8,
+      "option": "D",
+      "answer_text": "Answer them openly and win the argument.",
+      "primary_pm": "Atal Bihari Vajpayee",
+      "primary_points": 2,
+      "secondary_pm": "Rajiv Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 9,
+      "option": "A",
+      "answer_text": "I like building systems that last.",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "Manmohan Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 9,
+      "option": "B",
+      "answer_text": "I like getting things done fast.",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "Indira Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 9,
+      "option": "C",
+      "answer_text": "I like connecting with large numbers of people.",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "Atal Bihari Vajpayee",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 9,
+      "option": "D",
+      "answer_text": "I like thinking deeply before acting.",
+      "primary_pm": "P. V. Narasimha Rao",
+      "primary_points": 2,
+      "secondary_pm": "Manmohan Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 10,
+      "option": "A",
+      "answer_text": "Long-term reforms.",
+      "primary_pm": "P. V. Narasimha Rao",
+      "primary_points": 2,
+      "secondary_pm": "Manmohan Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 10,
+      "option": "B",
+      "answer_text": "Help for ordinary people right away.",
+      "primary_pm": "Lal Bahadur Shastri",
+      "primary_points": 2,
+      "secondary_pm": "Charan Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 10,
+      "option": "C",
+      "answer_text": "Big development projects people can see.",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "Rajiv Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 10,
+      "option": "D",
+      "answer_text": "Better planning and smoother government work.",
+      "primary_pm": "Manmohan Singh",
+      "primary_points": 2,
+      "secondary_pm": "Morarji Desai",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 11,
+      "option": "A",
+      "answer_text": "I think deeply and ask others for advice.",
+      "primary_pm": "I. K. Gujral",
+      "primary_points": 2,
+      "secondary_pm": "Atal Bihari Vajpayee",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 11,
+      "option": "B",
+      "answer_text": "I decide quickly and trust my judgment.",
+      "primary_pm": "Indira Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "Narendra Modi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 11,
+      "option": "C",
+      "answer_text": "I look at facts and expert views.",
+      "primary_pm": "Manmohan Singh",
+      "primary_points": 2,
+      "secondary_pm": "P. V. Narasimha Rao",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 11,
+      "option": "D",
+      "answer_text": "I think about what the public will support.",
+      "primary_pm": "V. P. Singh",
+      "primary_points": 2,
+      "secondary_pm": "Charan Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 12,
+      "option": "A",
+      "answer_text": "Strong democratic institutions.",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "Gulzarilal Nanda",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 12,
+      "option": "B",
+      "answer_text": "Shared culture and identity.",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "Atal Bihari Vajpayee",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 12,
+      "option": "C",
+      "answer_text": "Equal chance to grow and succeed.",
+      "primary_pm": "Manmohan Singh",
+      "primary_points": 2,
+      "secondary_pm": "Rajiv Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 12,
+      "option": "D",
+      "answer_text": "Working together for a common goal.",
+      "primary_pm": "Lal Bahadur Shastri",
+      "primary_points": 2,
+      "secondary_pm": "H. D. Deve Gowda",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 13,
+      "option": "A",
+      "answer_text": "Support change, but through proper systems.",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "Manmohan Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 13,
+      "option": "B",
+      "answer_text": "Lead the change boldly.",
+      "primary_pm": "Rajiv Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "Narendra Modi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 13,
+      "option": "C",
+      "answer_text": "Move carefully so the country does not split.",
+      "primary_pm": "Atal Bihari Vajpayee",
+      "primary_points": 2,
+      "secondary_pm": "I. K. Gujral",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 13,
+      "option": "D",
+      "answer_text": "Keep order and accept only what is practical.",
+      "primary_pm": "Morarji Desai",
+      "primary_points": 2,
+      "secondary_pm": "Indira Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 14,
+      "option": "A",
+      "answer_text": "Vision",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "Rajiv Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 14,
+      "option": "B",
+      "answer_text": "Discipline",
+      "primary_pm": "Morarji Desai",
+      "primary_points": 2,
+      "secondary_pm": "Indira Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 14,
+      "option": "C",
+      "answer_text": "Practical thinking",
+      "primary_pm": "P. V. Narasimha Rao",
+      "primary_points": 2,
+      "secondary_pm": "Manmohan Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 14,
+      "option": "D",
+      "answer_text": "Charisma",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "Atal Bihari Vajpayee",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 15,
+      "option": "A",
+      "answer_text": "You dream too much.",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "Rajiv Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 15,
+      "option": "B",
+      "answer_text": "You control too much.",
+      "primary_pm": "Indira Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "Narendra Modi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 15,
+      "option": "C",
+      "answer_text": "You are too careful.",
+      "primary_pm": "Manmohan Singh",
+      "primary_points": 2,
+      "secondary_pm": "P. V. Narasimha Rao",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 15,
+      "option": "D",
+      "answer_text": "You think too much about politics.",
+      "primary_pm": "V. P. Singh",
+      "primary_points": 2,
+      "secondary_pm": "Chandra Shekhar",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 16,
+      "option": "A",
+      "answer_text": "My beliefs and values.",
+      "primary_pm": "Lal Bahadur Shastri",
+      "primary_points": 2,
+      "secondary_pm": "Gulzarilal Nanda",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 16,
+      "option": "B",
+      "answer_text": "Firm control and order.",
+      "primary_pm": "Indira Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "Narendra Modi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 16,
+      "option": "C",
+      "answer_text": "Public trust.",
+      "primary_pm": "Atal Bihari Vajpayee",
+      "primary_points": 2,
+      "secondary_pm": "Lal Bahadur Shastri",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 16,
+      "option": "D",
+      "answer_text": "Support from many groups.",
+      "primary_pm": "H. D. Deve Gowda",
+      "primary_points": 2,
+      "secondary_pm": "I. K. Gujral",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 17,
+      "option": "A",
+      "answer_text": "Building a modern and strong state.",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "Rajiv Gandhi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 17,
+      "option": "B",
+      "answer_text": "Helping ordinary people live better.",
+      "primary_pm": "Lal Bahadur Shastri",
+      "primary_points": 2,
+      "secondary_pm": "Charan Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 17,
+      "option": "C",
+      "answer_text": "Making the nation more confident and united.",
+      "primary_pm": "Narendra Modi",
+      "primary_points": 2,
+      "secondary_pm": "Atal Bihari Vajpayee",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 17,
+      "option": "D",
+      "answer_text": "Changing old systems to help growth.",
+      "primary_pm": "P. V. Narasimha Rao",
+      "primary_points": 2,
+      "secondary_pm": "Manmohan Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 18,
+      "option": "A",
+      "answer_text": "Show the country where to go.",
+      "primary_pm": "Jawaharlal Nehru",
+      "primary_points": 2,
+      "secondary_pm": "Narendra Modi",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 18,
+      "option": "B",
+      "answer_text": "Run the government well.",
+      "primary_pm": "Manmohan Singh",
+      "primary_points": 2,
+      "secondary_pm": "Morarji Desai",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 18,
+      "option": "C",
+      "answer_text": "Represent the hopes of the people.",
+      "primary_pm": "Rajiv Gandhi",
+      "primary_points": 2,
+      "secondary_pm": "V. P. Singh",
+      "secondary_points": 1
+    },
+    {
+      "question_id": 18,
+      "option": "D",
+      "answer_text": "Keep different forces in balance.",
+      "primary_pm": "Atal Bihari Vajpayee",
+      "primary_points": 2,
+      "secondary_pm": "I. K. Gujral",
+      "secondary_points": 1
+    }
+  ],
+  "results": [
+    {
+      "pm": "Jawaharlal Nehru",
+      "subtitle": "The Nation Builder",
+      "summary": "You are thoughtful, future-focused, and drawn to big ideas. You naturally think about what a country, community, or institution can become over time, not just what it needs today.\n\nYou likely value learning, reason, dignity, and long-term progress. People with your style often stand out for their vision, idealism, and ability to build something that lasts.",
+      "strengths": "Visionary; intelligent; reflective; future-minded; institution-building.",
+      "growth_note": "You may sometimes think so far ahead that others want quicker action, but your strength is seeing the bigger picture."
+    },
+    {
+      "pm": "Gulzarilal Nanda",
+      "subtitle": "The Duty Keeper",
+      "summary": "You are dependable, sincere, and guided by responsibility. You may not seek attention, but people trust you when steadiness is needed.\n\nYou likely believe leadership is about service, calm judgment, and doing what is right in important moments. Your strength is not loud power. It is quiet reliability.",
+      "strengths": "Dependable; sincere; stable; duty-driven; trustworthy.",
+      "growth_note": "Your modest style may be easy to miss at first, but people remember how safe and steady they feel around you."
+    },
+    {
+      "pm": "Lal Bahadur Shastri",
+      "subtitle": "The Servant Leader",
+      "summary": "You are humble, honest, and deeply grounded. You do not need display or drama to lead well. Your strength comes from sincerity, discipline, and care for ordinary people.\n\nPeople with your style are often respected because they feel real. You likely value duty, fairness, and simple but meaningful leadership.",
+      "strengths": "Honest; humble; people-focused; principled; quietly strong.",
+      "growth_note": "Your calm style may be overlooked in louder settings, but your leadership feels genuine and deeply trusted."
+    },
+    {
+      "pm": "Indira Gandhi",
+      "subtitle": "The Strong Decider",
+      "summary": "You are bold, determined, and powerful under pressure. When things become difficult, your instinct is to step forward and act.\n\nYou likely carry a strong sense of authority and responsibility. People with your style are often admired for courage, toughness, and the ability to lead in high-stakes situations.",
+      "strengths": "Decisive; brave; commanding; resilient; action-oriented.",
+      "growth_note": "Your forceful style can feel intense to softer personalities, but your gift is that people rarely doubt your resolve."
+    },
+    {
+      "pm": "Morarji Desai",
+      "subtitle": "The Principled Administrator",
+      "summary": "You are disciplined, serious, and guided by standards. You believe leadership should be honest, orderly, and rooted in self-control.\n\nYou likely respect rules, structure, and personal integrity. People with your style often stand out for consistency, uprightness, and a strong moral center.",
+      "strengths": "Disciplined; principled; self-controlled; clear-minded; reliable.",
+      "growth_note": "At times you may come across as strict, but your strength is that others know exactly where you stand."
+    },
+    {
+      "pm": "Charan Singh",
+      "subtitle": "The Grounded People’s Leader",
+      "summary": "You are practical, rooted, and close to everyday life. You care about how policies affect real people, especially those outside elite spaces.\n\nYou likely value fairness, dignity, and the concerns of ordinary families. People with your style are often respected for being grounded and connected to lived reality.",
+      "strengths": "Practical; grounded; people-near; realistic; sincere.",
+      "growth_note": "You may prefer the real and immediate over the grand and symbolic, but that is what keeps your leadership human and relatable."
+    },
+    {
+      "pm": "Rajiv Gandhi",
+      "subtitle": "The Modernizer",
+      "summary": "You are forward-looking, energetic, and drawn to new possibilities. You are naturally interested in change, innovation, and the future.\n\nYou likely enjoy fresh ideas and believe systems can be improved. People with your style often appear youthful in mindset, hopeful, and eager to move things forward.",
+      "strengths": "Modern; energetic; imaginative; reform-minded; hopeful.",
+      "growth_note": "Your excitement for change may move faster than some people are comfortable with, but your gift is bringing fresh possibility into the room."
+    },
+    {
+      "pm": "V. P. Singh",
+      "subtitle": "The Reform-Driven Challenger",
+      "summary": "You are principled, bold, and willing to question the system when needed. You care about fairness and are not afraid to stand for change.\n\nYou likely believe leadership should respond to public concerns and moral pressure, not just protect the status quo. People with your style often seem courageous, reform-minded, and driven by justice.",
+      "strengths": "Courageous; reform-driven; principled; justice-minded; independent.",
+      "growth_note": "Your desire to correct what is wrong can create friction, but it also gives your leadership moral force."
+    },
+    {
+      "pm": "Chandra Shekhar",
+      "subtitle": "The Independent Fighter",
+      "summary": "You are bold, self-directed, and not easily controlled by others. You value conviction and the freedom to stand on your own judgment.\n\nYou likely have an inner toughness and a strong independent streak. People with your style often come across as fearless, candid, and personally courageous.",
+      "strengths": "Independent; fearless; candid; strong-willed; courageous.",
+      "growth_note": "Your self-directed style can feel intense at times, but it also means people see you as authentic and hard to bend."
+    },
+    {
+      "pm": "P. V. Narasimha Rao",
+      "subtitle": "The Quiet Reformer",
+      "summary": "You are strategic, thoughtful, and quietly effective. You do not need noise to make impact. You prefer careful thinking, good timing, and deep judgment.\n\nYou likely notice patterns others miss. People with your style often have great inner depth and the ability to guide major change without demanding attention.",
+      "strengths": "Strategic; patient; intelligent; calm; quietly powerful.",
+      "growth_note": "Because you are not flashy, some may not see your strengths right away, but your leadership often proves itself over time."
+    },
+    {
+      "pm": "Atal Bihari Vajpayee",
+      "subtitle": "The Consensus Leader",
+      "summary": "You are balanced, dignified, and able to bring people together. You believe leadership should combine conviction with grace.\n\nYou likely value respect, emotional steadiness, and keeping unity alive even when people disagree. People with your style are often admired for maturity, warmth, and trustworthiness.",
+      "strengths": "Balanced; wise; respectful; reassuring; bridge-building.",
+      "growth_note": "You may move more carefully than impatient people like, but your strength is that others feel heard and steadied by you."
+    },
+    {
+      "pm": "H. D. Deve Gowda",
+      "subtitle": "The Grassroots Consensus Builder",
+      "summary": "You are rooted, patient, and attentive to different voices. You believe leadership should stay connected to people on the ground.\n\nYou likely value listening, coalition-building, and practical understanding. People with your style are often seen as approachable, grounded, and quietly inclusive.",
+      "strengths": "Grounded; patient; inclusive; practical; people-connected.",
+      "growth_note": "Your low-key style may not chase attention, but it helps others feel that leadership is still close to real life."
+    },
+    {
+      "pm": "I. K. Gujral",
+      "subtitle": "The Gentle Diplomat",
+      "summary": "You are thoughtful, courteous, and deeply respectful in the way you lead. You believe relationships, dialogue, and balance matter.\n\nYou likely prefer calm intelligence over raw force. People with your style are often admired for tact, decency, and the ability to lower tension rather than raise it.",
+      "strengths": "Diplomatic; thoughtful; courteous; balanced; intellectually calm.",
+      "growth_note": "Your soft-spoken style may seem understated to some, but your strength lies in wisdom, tact, and emotional intelligence."
+    },
+    {
+      "pm": "Manmohan Singh",
+      "subtitle": "The Thoughtful Technocrat",
+      "summary": "You are intelligent, composed, and guided by substance over show. You care about sound judgment, careful policy, and doing serious work well.\n\nYou likely prefer depth to drama. People with your style are often respected for their calm mind, credibility, and ability to inspire trust through competence.",
+      "strengths": "Thoughtful; intelligent; composed; credible; policy-minded.",
+      "growth_note": "You may not seek the spotlight, but that often makes your leadership feel steadier and more trustworthy."
+    },
+    {
+      "pm": "Narendra Modi",
+      "subtitle": "The People’s Connector",
+      "summary": "You are confident, energetic, and highly connected to public feeling. You understand the power of message, purpose, and national pride.\n\nYou likely know how to create momentum and make people feel part of something larger. People with your style are often seen as charismatic, ambitious, and able to inspire strong belief.",
+      "strengths": "Charismatic; persuasive; confident; ambitious; energizing.",
+      "growth_note": "Your strong public style may feel intense to quieter personalities, but your gift is your ability to move people with conviction."
+    }
+  ]
+}
