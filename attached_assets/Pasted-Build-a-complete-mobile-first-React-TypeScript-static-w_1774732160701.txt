@@ -1,0 +1,254 @@
+Build a complete mobile-first React + TypeScript static web app called:
+
+“Which Indian Prime Minister Are You Most Like?”
+
+This is a clean, editorial-style personality quiz. It should feel thoughtful, warm, premium, respectful, and lightly playful.
+
+Core product requirements:
+- Mobile-first
+- Static front-end app
+- No backend
+- No auth
+- No database
+- Client-side scoring
+- LocalStorage for quiz progress
+- Easy to deploy later to Cloudflare Pages or GitHub Pages
+
+Design direction:
+- Clean editorial layout
+- Warm ivory background
+- Serif headline + modern sans-serif body
+- Narrow centered column
+- Soft cards
+- Subtle India-inspired abstract motifs only
+- No Indian flag styling
+- No Ashoka Chakra
+- No state emblems
+- No party symbols
+- No stereotypical “exotic India” imagery
+- No loud gradients
+- No meme-like styling
+
+Color palette:
+- background: #F8F3EA
+- surface: #FFFDF9
+- text: #1F1D1A
+- muted: #5E5A54
+- accent: #B7642B
+- accent soft: #F0D8C8
+- border: #DDD3C7
+- secondary: #2F5D62
+
+Typography:
+- Headings: Playfair Display
+- Body/UI: Inter
+
+Pages and screens required:
+1. Landing page
+2. Quiz question screen
+3. Result screen
+4. About page
+5. Sources & Credits page
+6. Privacy page
+7. Disclaimer page
+
+Core app flow:
+- Landing page with title, subtitle, disclaimer, start button
+- 18-question quiz
+- One question per screen
+- 4 answer choices per question
+- Progress bar
+- Back and Next buttons
+- Result screen with one final PM result only
+- Optional close-match card only if score rule qualifies
+- Footer links on all pages
+
+Landing page content:
+Title:
+Which Indian Prime Minister Are You Most Like?
+
+Subtitle:
+18 questions on leadership, values, decisions, and the kind of future you want to build.
+
+Landing disclaimer:
+For fun and reflection only. This quiz is a light personality match based on broad leadership styles. It is not a historical, political, or factual assessment.
+
+Question screen requirements:
+- One question at a time
+- Progress bar at top
+- “Question X of 18”
+- Large readable question text
+- Four vertically stacked answer cards
+- Selected state must be visually clear
+- Next button disabled until answer selected
+- Back button enabled after question 1
+- Subtle transitions only
+
+Result screen requirements:
+Show in this order:
+- decorative motif
+- smaller line: “You are…”
+- large PM name
+- archetype subtitle
+- 2 praise-focused paragraphs
+- strengths section
+- one gentle growth note
+- optional portrait
+- optional quote block
+- optional “Your leadership mix” card
+- Share Result button
+- Retake Quiz button
+- result disclaimer
+
+Important result wording rules:
+- respectful tone
+- praise-first
+- broad leadership style only
+- no ideology assignment
+- no psychological claims
+- no literal identity claims
+
+Result disclaimer:
+This result is a playful interpretation based on your answers. It is not a factual, political, or psychological assessment of you or any public figure.
+
+Scoring rules:
+- One winning PM only
+- Show close matches only if:
+  - within 3 points of winner
+  - and at least 6 total points
+- If no one qualifies, hide close-match card
+- Implement tie-break logic:
+  1. more high-value hits
+  2. stronger score on anchor questions
+  3. fallback tieBreakPriority array
+
+Result pool:
+- Jawaharlal Nehru
+- Gulzarilal Nanda
+- Lal Bahadur Shastri
+- Indira Gandhi
+- Morarji Desai
+- Charan Singh
+- Rajiv Gandhi
+- V. P. Singh
+- Chandra Shekhar
+- P. V. Narasimha Rao
+- Atal Bihari Vajpayee
+- H. D. Deve Gowda
+- I. K. Gujral
+- Manmohan Singh
+- Narendra Modi
+
+File structure:
+- src/App.tsx
+- src/types.ts
+- src/data/quiz.json
+- src/data/credits.json
+- src/components/QuizIntro.tsx
+- src/components/QuestionCard.tsx
+- src/components/AnswerOption.tsx
+- src/components/ProgressBar.tsx
+- src/components/ResultCard.tsx
+- src/components/ScoreMixCard.tsx
+- src/components/QuoteBlock.tsx
+- src/components/Disclaimer.tsx
+- src/components/Footer.tsx
+- src/components/ShareModal.tsx
+- src/pages/AboutPage.tsx
+- src/pages/SourcesPage.tsx
+- src/pages/PrivacyPage.tsx
+- src/pages/DisclaimerPage.tsx
+- src/utils/scoring.ts
+- src/utils/storage.ts
+- src/styles/theme.css
+
+theme.css requirements:
+Create CSS variables:
+--bg
+--surface
+--text
+--muted
+--accent
+--accent-soft
+--border
+--secondary
+--radius-card
+--radius-button
+--shadow-soft
+
+Use:
+:root {
+  --bg: #F8F3EA;
+  --surface: #FFFDF9;
+  --text: #1F1D1A;
+  --muted: #5E5A54;
+  --accent: #B7642B;
+  --accent-soft: #F0D8C8;
+  --border: #DDD3C7;
+  --secondary: #2F5D62;
+  --radius-card: 20px;
+  --radius-button: 14px;
+  --shadow-soft: 0 6px 24px rgba(0,0,0,0.06);
+}
+
+Responsiveness:
+- 0–479 px = small phones
+- 480–767 px = large phones
+- 768–1023 px = tablets
+- 1024+ px = desktop
+- Keep quiz content in a narrow centered column even on desktop
+- No horizontal scroll
+- Single-column on mobile
+- Full-width primary buttons on mobile
+- Large tap targets
+
+Accessibility:
+- proper button semantics
+- visible focus states
+- strong contrast
+- keyboard-friendly
+- minimum 16px body text on mobile
+
+Share behavior:
+- Use navigator.share() on supported mobile browsers
+- Fallback to custom share modal on desktop/unsupported devices
+- Modal actions:
+  - Copy link
+  - Copy result text
+  - Share on WhatsApp
+  - Share on X
+  - Close
+- Default share text:
+  I got {{PM_NAME}} — {{ARCHETYPE}}. Which Indian Prime Minister are you most like?
+- Link should go to homepage only, not serialized result state
+
+Footer content:
+Links:
+- About
+- Sources & Credits
+- Privacy
+- Disclaimer
+
+Short footer disclaimer:
+For fun and reflection only. This quiz matches broad leadership-style traits and does not represent historical judgment, political endorsement, or real-life similarity.
+
+Tiny privacy line:
+This site may store quiz progress locally in your browser to improve your experience.
+
+Implementation rules:
+- Keep it static and lightweight
+- Data-driven architecture only
+- Read quiz, result, quote, and portrait data from JSON
+- Do not hardcode PM content into components
+- Hide quote block if quote.show is false
+- Hide portrait if imageEnabled is false or needsManualReview is true
+- Keep code clean and easy to edit later
+
+Output:
+Generate the full front-end scaffold, responsive components, theme.css, footer pages, share modal, quote block, localStorage support, and clean starter architecture.
+Prioritize:
+1. correctness
+2. mobile UX
+3. visual polish
+4. data-driven structure
+5. safe and respectful presentation

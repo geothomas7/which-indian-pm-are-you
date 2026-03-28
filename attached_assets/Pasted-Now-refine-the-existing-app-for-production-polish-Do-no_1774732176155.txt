@@ -1,0 +1,97 @@
+Now refine the existing app for production polish.
+
+Do not rebuild from scratch.
+Improve the current codebase in place.
+
+Focus on:
+1. mobile polish
+2. visual hierarchy
+3. result page quality
+4. share UX
+5. credits/disclaimer clarity
+6. spacing and typography consistency
+
+Refinement tasks:
+
+A. Landing page
+- Make the landing page feel more elegant and editorial
+- Keep it minimal
+- Ensure title wraps well on small phones
+- Make subtitle easy to scan
+- Keep Start Quiz button full-width on mobile
+- Add a small tasteful abstract motif above the title
+
+B. Question screen
+- Improve spacing between progress bar, question counter, question, and answers
+- Ensure answer cards have enough padding and height for mobile taps
+- Ensure selected state is obvious
+- Keep transitions subtle
+- Make the question text feel prominent but not oversized
+- Keep buttons pinned naturally near the bottom without feeling cramped
+
+C. Result screen
+- Make the “You are…” line smaller and more muted above the PM name
+- Make PM name the strongest visual element
+- Make archetype subtitle elegant and secondary
+- Keep summary paragraphs short and readable
+- Render strengths as chips or short bullets
+- Make gentle note visually softer
+- If portrait exists, integrate it neatly without overpowering the text
+- If quote exists, render it as a tasteful editorial blockquote
+- If no quote or portrait exists, preserve balanced spacing
+
+D. Leadership mix card
+- Only show it if score rule qualifies
+- Make it visually lighter than the main result card
+- Use stacked rows, not a dense table
+- Thin progress bars optional, but subtle
+- Remove clutter if the rows feel too busy
+
+E. Share UX
+- Ensure navigator.share() works on supported mobile browsers
+- Improve fallback share modal
+- Add success toasts for copy actions
+- Keep share modal simple and clean
+- Make share copy sound natural
+
+F. Footer and information pages
+- Ensure footer links appear on all pages
+- Make footer unobtrusive
+- Style About, Sources & Credits, Privacy, and Disclaimer pages in the same editorial system
+- Ensure the Sources & Credits page renders portrait and quote credits cleanly from data
+
+G. Portrait and quote handling
+- Do not render any portrait with imageEnabled false
+- Do not render any portrait with needsManualReview true
+- Do not render any quote block with show false
+- Keep all logic data-driven
+- Add safe fallbacks so missing data never breaks layout
+
+H. Accessibility and responsiveness
+- Check small phones carefully
+- Ensure no horizontal overflow
+- Keep minimum 16px body text on mobile
+- Improve focus states
+- Verify color contrast
+- Make all interactive controls keyboard accessible
+
+I. Visual tone
+- Keep the design clean and simple, inspired by minimal editorial quiz sites
+- Do not make it flashy
+- Do not introduce heavy decoration
+- Keep it warm, restrained, and premium
+
+J. Code cleanup
+- Remove duplication where possible
+- Keep components small and readable
+- Improve naming if needed
+- Add only concise comments where actually useful
+
+Final output:
+- refined UI
+- no broken data rendering
+- clean mobile spacing
+- polished result page hierarchy
+- complete footer pages
+- share flow working
+- sources/credits page rendering from data

@@ -271,7 +271,18 @@
       "summary1": "You are thoughtful, future-focused, and drawn to big ideas. You naturally think about what a country, community, or institution can become over time — not just what it needs today.",
       "summary2": "You likely value learning, reason, dignity, and long-term progress. People with your style often stand out for their vision, idealism, and ability to build something that lasts.",
       "strengths": ["Visionary", "Intelligent", "Reflective", "Future-minded", "Institution-building"],
-      "gentleNote": "You may sometimes think so far ahead that others want quicker action, but your strength is seeing the bigger picture."
+      "gentleNote": "You may sometimes think so far ahead that others want quicker action, but your strength is seeing the bigger picture.",
+      "quote": {
+        "text": "At the stroke of the midnight hour, when the world sleeps, India will awake to life and freedom.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "Tryst with Destiny speech",
+        "sourceUrl": "https://archive.org/stream/jawaharialnrhrus01unse/jawaharialnrhrus01unse_djvu.txt",
+        "sourceType": "archival",
+        "status": "verified_archival",
+        "show": true
+      }
     },
     {
       "pm": "Gulzarilal Nanda",
@@ -279,7 +290,18 @@
       "summary1": "You are dependable, sincere, and guided by responsibility. You may not seek attention, but people trust you when steadiness is needed.",
       "summary2": "You likely believe leadership is about service, calm judgment, and doing what is right in important moments. Your strength is not loud power — it is quiet reliability.",
       "strengths": ["Dependable", "Sincere", "Stable", "Duty-driven", "Trustworthy"],
-      "gentleNote": "Your modest style may be easy to miss at first, but people remember how safe and steady they feel around you."
+      "gentleNote": "Your modest style may be easy to miss at first, but people remember how safe and steady they feel around you.",
+      "quote": {
+        "text": "The nation is in the grip of a crisis. It is in essence a crisis of character.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "Secondary archival quotation",
+        "sourceUrl": "https://en.wikiquote.org/wiki/Gulzarilal_Nanda",
+        "sourceType": "secondary",
+        "status": "verified_secondary",
+        "show": false
+      }
     },
     {
       "pm": "Lal Bahadur Shastri",
@@ -287,7 +309,18 @@
       "summary1": "You are humble, honest, and deeply grounded. You do not need display or drama to lead well. Your strength comes from sincerity, discipline, and care for ordinary people.",
       "summary2": "People with your style are often respected because they feel real. You likely value duty, fairness, and simple but meaningful leadership.",
       "strengths": ["Honest", "Humble", "People-focused", "Principled", "Quietly strong"],
-      "gentleNote": "Your calm style may be overlooked in louder settings, but your leadership feels genuine and deeply trusted."
+      "gentleNote": "Your calm style may be overlooked in louder settings, but your leadership feels genuine and deeply trusted.",
+      "quote": {
+        "text": "जय जवान, जय किसान",
+        "translation": "Hail the soldier, hail the farmer.",
+        "language": "hi",
+        "note": null,
+        "sourceTitle": "Official recollections in PM speeches",
+        "sourceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1852024",
+        "sourceType": "official_adjacent",
+        "status": "verified_official_adjacent",
+        "show": true
+      }
     },
     {
       "pm": "Indira Gandhi",
@@ -295,7 +328,18 @@
       "summary1": "You are bold, determined, and powerful under pressure. When things become difficult, your instinct is to step forward and act.",
       "summary2": "You likely carry a strong sense of authority and responsibility. People with your style are often admired for courage, toughness, and the ability to lead in high-stakes situations.",
       "strengths": ["Decisive", "Brave", "Commanding", "Resilient", "Action-oriented"],
-      "gentleNote": "Your forceful style can feel intense to softer personalities, but your gift is that people rarely doubt your resolve."
+      "gentleNote": "Your forceful style can feel intense to softer personalities, but your gift is that people rarely doubt your resolve.",
+      "quote": {
+        "text": "I would like the India of the future to keep this quality while ridding itself of poverty.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "The India of my Dreams",
+        "sourceUrl": "https://indiragandhi.in/en/philosophy/speeches/2",
+        "sourceType": "archival_foundation_site",
+        "status": "verified_secondary",
+        "show": true
+      }
     },
     {
       "pm": "Morarji Desai",
@@ -303,7 +347,18 @@
       "summary1": "You are disciplined, serious, and guided by standards. You believe leadership should be honest, orderly, and rooted in self-control.",
       "summary2": "You likely respect rules, structure, and personal integrity. People with your style often stand out for consistency, uprightness, and a strong moral center.",
       "strengths": ["Disciplined", "Principled", "Self-controlled", "Clear-minded", "Reliable"],
-      "gentleNote": "At times you may come across as strict, but your strength is that others know exactly where you stand."
+      "gentleNote": "At times you may come across as strict, but your strength is that others know exactly where you stand.",
+      "quote": {
+        "text": "For a democracy to be healthy and effective...",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "Secondary archival quotation",
+        "sourceUrl": "https://en.wikiquote.org/wiki/Morarji_Desai",
+        "sourceType": "secondary",
+        "status": "verified_secondary",
+        "show": false
+      }
     },
     {
       "pm": "Charan Singh",
@@ -311,7 +366,18 @@
       "summary1": "You are practical, rooted, and close to everyday life. You care about how policies affect real people, especially those outside elite spaces.",
       "summary2": "You likely value fairness, dignity, and the concerns of ordinary families. People with your style are often respected for being grounded and connected to lived reality.",
       "strengths": ["Practical", "Grounded", "People-near", "Realistic", "Sincere"],
-      "gentleNote": "You may prefer the real and immediate over the grand and symbolic, but that is what keeps your leadership human and relatable."
+      "gentleNote": "You may prefer the real and immediate over the grand and symbolic, but that is what keeps your leadership human and relatable.",
+      "quote": {
+        "text": "Economic development of the country turns on improvement in agricultural practices...",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "Ideas of Charan Singh / archival scholarship",
+        "sourceUrl": "https://charansingh.org/sites/default/files/EPW%20CS_Praveen%20.pdf",
+        "sourceType": "secondary_archival",
+        "status": "verified_secondary",
+        "show": true
+      }
     },
     {
       "pm": "Rajiv Gandhi",
@@ -319,7 +385,18 @@
       "summary1": "You are forward-looking, energetic, and drawn to new possibilities. You are naturally interested in change, innovation, and the future.",
       "summary2": "You likely enjoy fresh ideas and believe systems can be improved. People with your style often appear youthful in mindset, hopeful, and eager to move things forward.",
       "strengths": ["Modern", "Energetic", "Imaginative", "Reform-minded", "Hopeful"],
-      "gentleNote": "Your excitement for change may move faster than some people are comfortable with, but your gift is bringing fresh possibility into the room."
+      "gentleNote": "Your excitement for change may move faster than some people are comfortable with, but your gift is bringing fresh possibility into the room.",
+      "quote": {
+        "text": "For nation-building, the first requisite is peace — peace with our neighbours and peace in the world.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "Broadcast to the Nation, 12 November 1984",
+        "sourceUrl": "https://en.wikiquote.org/wiki/Rajiv_Gandhi",
+        "sourceType": "secondary_archival",
+        "status": "verified_secondary",
+        "show": true
+      }
     },
     {
       "pm": "V. P. Singh",
@@ -327,7 +404,18 @@
       "summary1": "You are principled, bold, and willing to question the system when needed. You care about fairness and are not afraid to stand for change.",
       "summary2": "You likely believe leadership should respond to public concerns and moral pressure, not just protect the status quo. People with your style often seem courageous, reform-minded, and driven by justice.",
       "strengths": ["Courageous", "Reform-driven", "Principled", "Justice-minded", "Independent"],
-      "gentleNote": "Your desire to correct what is wrong can create friction, but it also gives your leadership moral force."
+      "gentleNote": "Your desire to correct what is wrong can create friction, but it also gives your leadership moral force.",
+      "quote": {
+        "text": "For one, equity is now on the national agenda. No party can ignore it.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "Interview / archival quotation",
+        "sourceUrl": "https://libquotes.com/v-p-singh",
+        "sourceType": "secondary_archival",
+        "status": "verified_secondary",
+        "show": true
+      }
     },
     {
       "pm": "Chandra Shekhar",
@@ -335,7 +423,18 @@
       "summary1": "You are bold, self-directed, and not easily controlled by others. You value conviction and the freedom to stand on your own judgment.",
       "summary2": "You likely have an inner toughness and a strong independent streak. People with your style often come across as fearless, candid, and personally courageous.",
       "strengths": ["Independent", "Fearless", "Candid", "Strong-willed", "Courageous"],
-      "gentleNote": "Your self-directed style can feel intense at times, but it also means people see you as authentic and hard to bend."
+      "gentleNote": "Your self-directed style can feel intense at times, but it also means people see you as authentic and hard to bend.",
+      "quote": {
+        "text": "My government will do everything to take the country forward in all spheres.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "The Long March: Profile of Prime Minister Chandra Shekhar",
+        "sourceUrl": "https://en.wikiquote.org/wiki/Chandra_Shekhar",
+        "sourceType": "secondary_archival",
+        "status": "verified_secondary",
+        "show": true
+      }
     },
     {
       "pm": "P. V. Narasimha Rao",
@@ -343,7 +442,18 @@
       "summary1": "You are strategic, thoughtful, and quietly effective. You do not need noise to make impact. You prefer careful thinking, good timing, and deep judgment.",
       "summary2": "You likely notice patterns others miss. People with your style often have great inner depth and the ability to guide major change without demanding attention.",
       "strengths": ["Strategic", "Patient", "Intelligent", "Calm", "Quietly powerful"],
-      "gentleNote": "Because you are not flashy, some may not see your strengths right away, but your leadership often proves itself over time."
+      "gentleNote": "Because you are not flashy, some may not see your strengths right away, but your leadership often proves itself over time.",
+      "quote": {
+        "text": "My objective is to make India truly self-reliant.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "1991 address reference",
+        "sourceUrl": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=1696307",
+        "sourceType": "secondary_archival",
+        "status": "verified_secondary",
+        "show": true
+      }
     },
     {
       "pm": "Atal Bihari Vajpayee",
@@ -351,7 +461,18 @@
       "summary1": "You are balanced, dignified, and able to bring people together. You believe leadership should combine conviction with grace.",
       "summary2": "You likely value respect, emotional steadiness, and keeping unity alive even when people disagree. People with your style are often admired for maturity, warmth, and trustworthiness.",
       "strengths": ["Balanced", "Wise", "Respectful", "Reassuring", "Bridge-building"],
-      "gentleNote": "You may move more carefully than impatient people like, but your strength is that others feel heard and steadied by you."
+      "gentleNote": "You may move more carefully than impatient people like, but your strength is that others feel heard and steadied by you.",
+      "quote": {
+        "text": "We are not to build a new nation but to make this ancient nation virile to face the challenge of modern times.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "Speech reference cited in archival quotation",
+        "sourceUrl": "https://en.wikiquote.org/wiki/Atal_Bihari_Vajpayee",
+        "sourceType": "secondary_archival",
+        "status": "verified_secondary",
+        "show": true
+      }
     },
     {
       "pm": "H. D. Deve Gowda",
@@ -359,7 +480,18 @@
       "summary1": "You are rooted, patient, and attentive to different voices. You believe leadership should stay connected to people on the ground.",
       "summary2": "You likely value listening, coalition-building, and practical understanding. People with your style are often seen as approachable, grounded, and quietly inclusive.",
       "strengths": ["Grounded", "Patient", "Inclusive", "Practical", "People-connected"],
-      "gentleNote": "Your low-key style may not chase attention, but it helps others feel that leadership is still close to real life."
+      "gentleNote": "Your low-key style may not chase attention, but it helps others feel that leadership is still close to real life.",
+      "quote": {
+        "text": "One should live amidst farmers, till land, and tend cows and buffaloes.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "Secondary quotation",
+        "sourceUrl": "https://libquotes.com/h-d-deve-gowda",
+        "sourceType": "secondary",
+        "status": "verified_secondary",
+        "show": false
+      }
     },
     {
       "pm": "I. K. Gujral",
@@ -367,7 +499,18 @@
       "summary1": "You are thoughtful, courteous, and deeply respectful in the way you lead. You believe relationships, dialogue, and balance matter.",
       "summary2": "You likely prefer calm intelligence over raw force. People with your style are often admired for tact, decency, and the ability to lower tension rather than raise it.",
       "strengths": ["Diplomatic", "Thoughtful", "Courteous", "Balanced", "Intellectually calm"],
-      "gentleNote": "Your soft-spoken style may seem understated to some, but your strength lies in wisdom, tact, and emotional intelligence."
+      "gentleNote": "Your soft-spoken style may seem understated to some, but your strength lies in wisdom, tact, and emotional intelligence.",
+      "quote": {
+        "text": "India today stands on the threshold of greatness and that greatness is within our reach, within our grasp. We can do it and we must.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "Address to the Nation, 15 August 1997",
+        "sourceUrl": "https://eparlib.sansad.in/bitstream/123456789/2977541/1/PM_Speeches_IK_Gujral_Eng.pdf",
+        "sourceType": "official_parliament_archive",
+        "status": "verified_official",
+        "show": true
+      }
     },
     {
       "pm": "Manmohan Singh",
@@ -375,7 +518,18 @@
       "summary1": "You are intelligent, composed, and guided by substance over show. You care about sound judgment, careful policy, and doing serious work well.",
       "summary2": "You likely prefer depth to drama. People with your style are often respected for their calm mind, credibility, and ability to inspire trust through competence.",
       "strengths": ["Thoughtful", "Intelligent", "Composed", "Credible", "Policy-minded"],
-      "gentleNote": "You may not seek the spotlight, but that often makes your leadership feel steadier and more trustworthy."
+      "gentleNote": "You may not seek the spotlight, but that often makes your leadership feel steadier and more trustworthy.",
+      "quote": {
+        "text": "We cannot undo the past, but we have an option, today, to build a better future.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "Prime Minister's statement in Lok Sabha, 12 August 2005",
+        "sourceUrl": "https://www.pib.gov.in/newsite/erelcontent.aspx?relid=9421",
+        "sourceType": "official",
+        "status": "verified_official",
+        "show": true
+      }
     },
     {
       "pm": "Narendra Modi",
@@ -383,7 +537,18 @@
       "summary1": "You are confident, energetic, and highly connected to public feeling. You understand the power of message, purpose, and national pride.",
       "summary2": "You likely know how to create momentum and make people feel part of something larger. People with your style are often seen as charismatic, ambitious, and able to inspire strong belief.",
       "strengths": ["Charismatic", "Persuasive", "Confident", "Ambitious", "Energizing"],
-      "gentleNote": "Your strong public style may feel intense to quieter personalities, but your gift is your ability to move people with conviction."
+      "gentleNote": "Your strong public style may feel intense to quieter personalities, but your gift is your ability to move people with conviction.",
+      "quote": {
+        "text": "Nation building never happens with immediate thinking; it happens with a big vision, patience, and decisions taken on time.",
+        "translation": null,
+        "language": "en",
+        "note": null,
+        "sourceTitle": "Network18 Rising Bharat Summit",
+        "sourceUrl": "https://www.pmindia.gov.in/en/news_updates/pm-addresses-network18-rising-bharat-summit/",
+        "sourceType": "official",
+        "status": "verified_official",
+        "show": true
+      }
     }
   ]
 }

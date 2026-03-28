@@ -1,0 +1,387 @@
+Now fill the app with the actual content data.
+
+Update or generate:
+- src/data/quiz.json
+- src/data/credits.json
+
+Use a clean, structured, strongly typed JSON shape.
+
+quiz.json should contain:
+- metadata
+- displayRules
+- tieBreakPriority
+- questions
+- results
+
+Each question should have:
+- id
+- text
+- options
+
+Each option should have:
+- id
+- text
+- scores object mapping PM names to numeric values
+
+Use the 18 questions and scoring logic already prepared for the quiz.
+Keep the reading level simple and clear, about Grade 10.
+
+Each result entry should include:
+- name
+- archetype
+- summary1
+- summary2
+- strengths array
+- gentleNote
+- quote object
+- optional portraitRef field that matches credits.json
+
+Include these 15 PMs:
+- Jawaharlal Nehru
+- Gulzarilal Nanda
+- Lal Bahadur Shastri
+- Indira Gandhi
+- Morarji Desai
+- Charan Singh
+- Rajiv Gandhi
+- V. P. Singh
+- Chandra Shekhar
+- P. V. Narasimha Rao
+- Atal Bihari Vajpayee
+- H. D. Deve Gowda
+- I. K. Gujral
+- Manmohan Singh
+- Narendra Modi
+
+Quote object shape:
+- text
+- translation
+- language
+- note
+- sourceTitle
+- sourceUrl
+- sourceType
+- status
+- show
+
+Use these quotes exactly:
+
+Jawaharlal Nehru
+text: At the stroke of the midnight hour, when the world sleeps, India will awake to life and freedom.
+translation: null
+language: en
+note: null
+sourceTitle: Tryst with Destiny speech
+sourceUrl: https://archive.org/stream/jawaharialnrhrus01unse/jawaharialnrhrus01unse_djvu.txt
+sourceType: archival
+status: verified_archival
+show: true
+
+Gulzarilal Nanda
+text: The nation is in the grip of a crisis. It is in essence a crisis of character.
+translation: null
+language: en
+note: null
+sourceTitle: Secondary archival quotation
+sourceUrl: https://en.wikiquote.org/wiki/Gulzarilal_Nanda
+sourceType: secondary
+status: verified_secondary
+show: false
+
+Lal Bahadur Shastri
+text: जय जवान, जय किसान
+translation: Hail the soldier, hail the farmer.
+language: hi
+note: null
+sourceTitle: Official recollections in PM speeches
+sourceUrl: https://www.pib.gov.in/PressReleasePage.aspx?PRID=1852024
+sourceType: official_adjacent
+status: verified_official_adjacent
+show: true
+
+Indira Gandhi
+text: I would like the India of the future to keep this quality while ridding itself of poverty.
+translation: null
+language: en
+note: null
+sourceTitle: The India of my Dreams
+sourceUrl: https://indiragandhi.in/en/philosophy/speeches/2
+sourceType: archival_foundation_site
+status: verified_secondary
+show: true
+
+Morarji Desai
+text: For a democracy to be healthy and effective...
+translation: null
+language: en
+note: null
+sourceTitle: Secondary archival quotation
+sourceUrl: https://en.wikiquote.org/wiki/Morarji_Desai
+sourceType: secondary
+status: verified_secondary
+show: false
+
+Charan Singh
+text: Economic development of the country turns on improvement in agricultural practices...
+translation: null
+language: en
+note: null
+sourceTitle: Ideas of Charan Singh / archival scholarship
+sourceUrl: https://charansingh.org/sites/default/files/EPW%20CS_Praveen%20.pdf
+sourceType: secondary_archival
+status: verified_secondary
+show: true
+
+Rajiv Gandhi
+text: For nation-building, the first requisite is peace— peace with our neighbours and peace in the world.
+translation: null
+language: en
+note: null
+sourceTitle: Broadcast to the Nation, 12 November 1984
+sourceUrl: https://en.wikiquote.org/wiki/Rajiv_Gandhi
+sourceType: secondary_archival
+status: verified_secondary
+show: true
+
+V. P. Singh
+text: For one, equity is now on the national agenda. No party can ignore it.
+translation: null
+language: en
+note: null
+sourceTitle: Interview / archival quotation
+sourceUrl: https://libquotes.com/v-p-singh
+sourceType: secondary_archival
+status: verified_secondary
+show: true
+
+Chandra Shekhar
+text: My government will do everything to take the country forward in all spheres.
+translation: null
+language: en
+note: null
+sourceTitle: The Long March: Profile of Prime Minister Chandra Shekhar
+sourceUrl: https://en.wikiquote.org/wiki/Chandra_Shekhar
+sourceType: secondary_archival
+status: verified_secondary
+show: true
+
+P. V. Narasimha Rao
+text: My objective is to make India truly self-reliant.
+translation: null
+language: en
+note: null
+sourceTitle: 1991 address reference
+sourceUrl: https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=1696307
+sourceType: secondary_archival
+status: verified_secondary
+show: true
+
+Atal Bihari Vajpayee
+text: We are not to build a new nation but to make this ancient nation virile to face the challenge of modern times.
+translation: null
+language: en
+note: null
+sourceTitle: Speech reference cited in archival quotation
+sourceUrl: https://en.wikiquote.org/wiki/Atal_Bihari_Vajpayee
+sourceType: secondary_archival
+status: verified_secondary
+show: true
+
+H. D. Deve Gowda
+text: One should live amidst farmers, till land, and tend cows and buffaloes.
+translation: null
+language: en
+note: null
+sourceTitle: Secondary quotation
+sourceUrl: https://libquotes.com/h-d-deve-gowda
+sourceType: secondary
+status: verified_secondary
+show: false
+
+I. K. Gujral
+text: India today stands on the threshold of greatness and that greatness is within our reach, within our grasp. We can do it and we must.
+translation: null
+language: en
+note: null
+sourceTitle: Address to the Nation, 15 August 1997
+sourceUrl: https://eparlib.sansad.in/bitstream/123456789/2977541/1/PM_Speeches_IK_Gujral_Eng.pdf
+sourceType: official_parliament_archive
+status: verified_official
+show: true
+
+Manmohan Singh
+text: We cannot undo the past, but we have an option, today, to build a better future.
+translation: null
+language: en
+note: null
+sourceTitle: Prime Minister's statement in Lok Sabha, 12 August 2005
+sourceUrl: https://www.pib.gov.in/newsite/erelcontent.aspx?relid=9421
+sourceType: official
+status: verified_official
+show: true
+
+Narendra Modi
+text: Nation building never happens with immediate thinking; it happens with a big vision, patience, and decisions taken on time.
+translation: null
+language: en
+note: null
+sourceTitle: Network18 Rising Bharat Summit
+sourceUrl: https://www.pmindia.gov.in/en/news_updates/pm-addresses-network18-rising-bharat-summit/
+sourceType: official
+status: verified_official
+show: true
+
+credits.json should contain portrait source data.
+
+Each portrait entry should include:
+- pmName
+- imageEnabled
+- imageTitle
+- imagePageUrl
+- sourceName
+- licenseName
+- attributionText
+- needsManualReview
+
+Use these exact portrait entries:
+
+Jawaharlal Nehru
+imageEnabled: true
+imageTitle: Portrait of Jawaharlal Nehru in 1942.JPG
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Portrait_of_Jawaharlal_Nehru_in_1942.JPG
+sourceName: Wikimedia Commons
+licenseName: Public domain (India)
+attributionText: Jawaharlal Nehru portrait — “Portrait of Jawaharlal Nehru in 1942.JPG”, via Wikimedia Commons, public domain in India.
+needsManualReview: false
+
+Gulzarilal Nanda
+imageEnabled: false
+imageTitle: Gulzarilal Nanda 1.jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Gulzarilal_Nanda_1.jpg
+sourceName: Wikimedia Commons
+licenseName: CC BY-SA 3.0 Unported
+attributionText: Gulzarilal Nanda portrait — “Gulzarilal Nanda 1.jpg”, via Wikimedia Commons, licensed under CC BY-SA 3.0.
+needsManualReview: false
+
+Lal Bahadur Shastri
+imageEnabled: true
+imageTitle: Shri Lal Bahadur Shastri in 1963.jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Shri_Lal_Bahadur_Shastri_in_1963.jpg
+sourceName: Wikimedia Commons
+licenseName: CC BY-SA 4.0
+attributionText: Lal Bahadur Shastri portrait — “Shri Lal Bahadur Shastri in 1963.jpg”, via Wikimedia Commons, licensed under CC BY-SA 4.0.
+needsManualReview: false
+
+Indira Gandhi
+imageEnabled: true
+imageTitle: Indira Gandhi official portrait.png
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Indira_Gandhi_official_portrait.png
+sourceName: Wikimedia Commons / Government of India
+licenseName: GODL-India
+attributionText: Indira Gandhi portrait — “Indira Gandhi official portrait.png”, Government of India, via Wikimedia Commons, published under GODL-India.
+needsManualReview: false
+
+Morarji Desai
+imageEnabled: true
+imageTitle: Morarji Desai 1996 stamp of India.jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Morarji_Desai_1996_stamp_of_India.jpg
+sourceName: Wikimedia Commons / Government of India
+licenseName: GODL-India
+attributionText: Morarji Desai portrait — “Morarji Desai 1996 stamp of India.jpg”, via Wikimedia Commons, published under GODL-India.
+needsManualReview: false
+
+Charan Singh
+imageEnabled: true
+imageTitle: Charan Singh.jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Charan_Singh.jpg
+sourceName: Wikimedia Commons / Government of India
+licenseName: GODL-India
+attributionText: Charan Singh portrait — “Charan Singh.jpg”, via Wikimedia Commons, published under GODL-India.
+needsManualReview: false
+
+Rajiv Gandhi
+imageEnabled: true
+imageTitle: Rajiv Gandhi (1987).jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Rajiv_Gandhi_(1987).jpg
+sourceName: Wikimedia Commons
+licenseName: CC BY-SA 3.0 Netherlands
+attributionText: Rajiv Gandhi portrait — “Rajiv Gandhi (1987).jpg”, via Wikimedia Commons, licensed under CC BY-SA 3.0 NL.
+needsManualReview: false
+
+V. P. Singh
+imageEnabled: true
+imageTitle: Vp singh.jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Vp_singh.jpg
+sourceName: Wikimedia Commons
+licenseName: CC BY-SA 3.0 Unported
+attributionText: V. P. Singh portrait — “Vp singh.jpg”, via Wikimedia Commons, licensed under CC BY-SA 3.0.
+needsManualReview: false
+
+Chandra Shekhar
+imageEnabled: true
+imageTitle: Chandrashekhar-Prime-Minister.jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Chandrashekhar-Prime-Minister.jpg
+sourceName: Wikimedia Commons
+licenseName: CC BY-SA 3.0 Unported
+attributionText: Chandra Shekhar portrait — “Chandrashekhar-Prime-Minister.jpg”, via Wikimedia Commons, licensed under CC BY-SA 3.0.
+needsManualReview: false
+
+P. V. Narasimha Rao
+imageEnabled: true
+imageTitle: P. V. Narasimha Rao.JPG
+imagePageUrl: https://commons.wikimedia.org/wiki/File:P._V._Narasimha_Rao.JPG
+sourceName: Wikimedia Commons
+licenseName: CC BY 3.0 Unported
+attributionText: P. V. Narasimha Rao portrait — “P. V. Narasimha Rao.JPG”, via Wikimedia Commons, licensed under CC BY 3.0.
+needsManualReview: false
+
+Atal Bihari Vajpayee
+imageEnabled: true
+imageTitle: Atal Bihari Vajpayee.jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Atal_Bihari_Vajpayee.jpg
+sourceName: Wikimedia Commons / Government of India
+licenseName: GODL-India
+attributionText: Atal Bihari Vajpayee portrait — “Atal Bihari Vajpayee.jpg”, via Wikimedia Commons, published under GODL-India.
+needsManualReview: false
+
+H. D. Deve Gowda
+imageEnabled: false
+imageTitle: H. D. Deve Gowda BNC.jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:H._D._Deve_Gowda_BNC.jpg
+sourceName: Wikimedia Commons
+licenseName: GFDL / Free Art License
+attributionText: H. D. Deve Gowda portrait — “H. D. Deve Gowda BNC.jpg”, via Wikimedia Commons, under GFDL / Free Art License.
+needsManualReview: true
+
+I. K. Gujral
+imageEnabled: true
+imageTitle: I k gujral.jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:I_k_gujral.jpg
+sourceName: Wikimedia Commons
+licenseName: CC BY 2.0 Generic
+attributionText: I. K. Gujral portrait — “I k gujral.jpg”, via Wikimedia Commons, licensed under CC BY 2.0.
+needsManualReview: false
+
+Manmohan Singh
+imageEnabled: true
+imageTitle: Manmohan Singh official Portrait.jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Manmohan_Singh_official_Portrait.jpg
+sourceName: Wikimedia Commons / Government of India
+licenseName: GODL-India
+attributionText: Manmohan Singh portrait — “Manmohan Singh official Portrait.jpg”, via Wikimedia Commons, published under GODL-India.
+needsManualReview: false
+
+Narendra Modi
+imageEnabled: true
+imageTitle: Official portrait of Narendra Modi, 2022.jpg
+imagePageUrl: https://commons.wikimedia.org/wiki/File:Official_portrait_of_Narendra_Modi,_2022.jpg
+sourceName: Wikimedia Commons / Government of India
+licenseName: GODL-India
+attributionText: Narendra Modi portrait — “Official portrait of Narendra Modi, 2022.jpg”, via Wikimedia Commons, published under GODL-India.
+needsManualReview: false
+
+Rules:
+- Do not render portraits when imageEnabled is false
+- Do not render portraits when needsManualReview is true
+- Render credits on the Sources & Credits page from data, not hardcoded copy
+- Keep all data editable and clearly structured
