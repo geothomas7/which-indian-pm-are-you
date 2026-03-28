@@ -21,7 +21,8 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 ```text
 artifacts-monorepo/
 ├── artifacts/              # Deployable applications
-│   └── api-server/         # Express API server
+│   ├── api-server/         # Express API server
+│   └── indian-pm-quiz/     # "Which Indian PM Are You Most Like?" quiz app
 ├── lib/                    # Shared libraries
 │   ├── api-spec/           # OpenAPI spec + Orval codegen config
 │   ├── api-client-react/   # Generated React Query hooks
@@ -90,6 +91,18 @@ Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used b
 ### `lib/api-client-react` (`@workspace/api-client-react`)
 
 Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
+
+### `artifacts/indian-pm-quiz` (`@workspace/indian-pm-quiz`)
+
+Mobile-first React + Vite personality quiz app. No backend — fully client-side.
+
+- Entry: `src/main.tsx` → `src/App.tsx`
+- Quiz data: `src/data/quiz.json` — 18 questions, scoring matrix, 15 PM result profiles
+- State hook: `src/hooks/useQuiz.ts` — manages screens (intro/question/result), localStorage persistence, scoring, tie-breaker logic
+- Components: `src/components/quiz/` — QuizIntro, QuestionCard, AnswerOption, ProgressBar, ResultCard, ScoreMixCard, Disclaimer, Motif
+- Styling: `src/index.css` — CSS custom properties theme (cream palette), Playfair Display + Inter fonts, mobile-first responsive layout
+- Scoring: 2 pts primary + 1 pt secondary PM per answer; tie-breaker by primary hits then tiebreaker questions; secondary matches shown only if within 3 pts of winner and ≥6 pts total
+- Share: Web Share API with clipboard fallback
 
 ### `scripts` (`@workspace/scripts`)
 

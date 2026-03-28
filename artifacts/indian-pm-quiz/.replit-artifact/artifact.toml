@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Which Indian PM Are You Most Like?"
+version = "1.0.0"
+id = "artifacts/indian-pm-quiz"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23828
+
+[services.development]
+run = "pnpm --filter @workspace/indian-pm-quiz run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/indian-pm-quiz", "run", "build" ]
+publicDir = "artifacts/indian-pm-quiz/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23828"
+BASE_PATH = "/"
