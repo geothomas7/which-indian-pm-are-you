@@ -50,8 +50,9 @@ export function SourcesPage({ onNavigate }: SourcesPageProps) {
       <section className="info-section">
         <h2 className="info-h2">Quotes</h2>
         <p className="info-muted">
-          Quotes are shown only when they have been verified through archival or
-          official sources. Quotes with lower confidence are hidden by default.
+          Quotes are shown only when they can be attributed to a named source —
+          such as a speech, published address, interview, or referenced work.
+          Quotes that could not be traced to a specific named source are not displayed.
         </p>
         <ul className="credits-list">
           {quizData.results.map((r) => (

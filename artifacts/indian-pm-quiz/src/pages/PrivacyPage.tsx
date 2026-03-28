@@ -34,7 +34,13 @@ export function PrivacyPage({ onNavigate }: PrivacyPageProps) {
       </section>
 
       <section className="info-section">
-        <h2 className="info-h2">External links</h2>
+        <h2 className="info-h2">External connections</h2>
+        <p>
+          Where a portrait is shown on the result screen, the image is loaded
+          directly from Wikimedia Commons. This is a standard image request —
+          no personal data is sent — but Wikimedia's servers will receive your
+          IP address as part of that request, as with any external image on the web.
+        </p>
         <p>
           The Sources &amp; Credits page links to Wikimedia Commons and other public
           archival sites for attribution. These links open in a new tab and are

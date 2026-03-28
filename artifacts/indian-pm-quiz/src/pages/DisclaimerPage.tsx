@@ -60,9 +60,10 @@ export function DisclaimerPage({ onNavigate }: DisclaimerPageProps) {
       <section className="info-section">
         <h2 className="info-h2">Quotes</h2>
         <p>
-          Where quotes are shown, they are attributed to publicly available
-          sources. They are shared for educational and contextual purposes only.
-          Source links are provided for verification.
+          Where quotes are shown, they are attributed to a named source such as
+          a speech, address, interview, or published work. They are shared for
+          contextual and reflective purposes only. Attribution details are listed
+          in Sources &amp; Credits.
         </p>
       </section>
     </main>
