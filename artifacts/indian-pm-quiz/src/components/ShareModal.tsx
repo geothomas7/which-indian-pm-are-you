@@ -8,7 +8,6 @@ interface ShareModalProps {
 
 export function ShareModal({ pmName, archetype, onClose }: ShareModalProps) {
   const [copiedLink, setCopiedLink] = useState(false);
-  const [copiedText, setCopiedText] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
 
@@ -35,16 +34,6 @@ export function ShareModal({ pmName, archetype, onClose }: ShareModalProps) {
       await navigator.clipboard.writeText(shareUrl);
       setCopiedLink(true);
       setTimeout(() => setCopiedLink(false), 2000);
-    } catch {
-      // ignore
-    }
-  };
-
-  const copyText = async () => {
-    try {
-      await navigator.clipboard.writeText(`${shareText} ${shareUrl}`);
-      setCopiedText(true);
-      setTimeout(() => setCopiedText(false), 2000);
     } catch {
       // ignore
     }
@@ -80,9 +69,6 @@ export function ShareModal({ pmName, archetype, onClose }: ShareModalProps) {
         <div className="quiz-modal-actions">
           <button type="button" className="quiz-modal-btn" onClick={copyLink}>
             {copiedLink ? "✓ Link copied!" : "Copy link"}
-          </button>
-          <button type="button" className="quiz-modal-btn" onClick={copyText}>
-            {copiedText ? "✓ Text copied!" : "Copy result text"}
           </button>
           <a
             href={whatsappUrl}

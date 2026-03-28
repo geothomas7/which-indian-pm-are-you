@@ -1,6 +1,9 @@
 import type { PMScore } from "../../hooks/useQuiz";
 import quizData from "../../data/quiz.json";
 
+const BAR_MAX = 88;
+const BAR_MIN = 52;
+
 interface ScoreMixCardProps {
   secondaryMatches: PMScore[];
   winnerTotal: number;
@@ -8,6 +11,18 @@ interface ScoreMixCardProps {
 
 export function ScoreMixCard({ secondaryMatches, winnerTotal }: ScoreMixCardProps) {
   if (!secondaryMatches.length) return null;
+
+  const maxScore = Math.max(...secondaryMatches.map((m) => m.total));
+  const minScore = Math.min(...secondaryMatches.map((m) => m.total));
+  const scoreRange = maxScore - minScore;
+
+  function barPct(score: number): number {
+    if (scoreRange === 0) {
+      return Math.round((score / winnerTotal) * 100);
+    }
+    const t = (score - minScore) / scoreRange;
+    return Math.round(BAR_MIN + t * (BAR_MAX - BAR_MIN));
+  }
 
   return (
     <div className="quiz-mix-card">
@@ -18,12 +33,15 @@ export function ScoreMixCard({ secondaryMatches, winnerTotal }: ScoreMixCardProp
       <div className="quiz-mix-list">
         {secondaryMatches.map((match) => {
           const result = quizData.results.find((r) => r.pm === match.pm);
-          const pct = Math.round((match.total / winnerTotal) * 100);
+          const pct = barPct(match.total);
           return (
             <div key={match.pm} className="quiz-mix-item">
               <div className="quiz-mix-item-header">
                 <span className="quiz-mix-pm">{match.pm}</span>
-                {result && <span className="quiz-mix-subtitle">{result.subtitle}</span>}
+                <span className="quiz-mix-right">
+                  {result && <span className="quiz-mix-subtitle">{result.subtitle}</span>}
+                  <span className="quiz-mix-score">{match.total} pts</span>
+                </span>
               </div>
               <div className="quiz-mix-bar-track">
                 <div className="quiz-mix-bar-fill" style={{ width: `${pct}%` }} />
