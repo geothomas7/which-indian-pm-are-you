@@ -36,6 +36,12 @@ export function PrivacyPage({ onNavigate }: PrivacyPageProps) {
       <section className="info-section">
         <h2 className="info-h2">External connections</h2>
         <p>
+          This site loads fonts from Google Fonts (fonts.googleapis.com). This is
+          a standard CDN request — no personal data beyond what is implicit in any
+          web request is sent — but Google's servers will receive your IP address
+          as part of that request.
+        </p>
+        <p>
           Where a portrait is shown on the result screen, the image is loaded
           directly from Wikimedia Commons. This is a standard image request —
           no personal data is sent — but Wikimedia's servers will receive your
