@@ -85,9 +85,15 @@ function resolveResults(answers: Record<number, string>): QuizResult | null {
   if (!scores.length) return null;
 
   scores.sort((a, b) => {
+    // Step 1: total accumulated points
     if (b.total !== a.total) return b.total - a.total;
+    // Step 2: primary-hit count (direct wins)
     if (b.primaryHits !== a.primaryHits) return b.primaryHits - a.primaryHits;
-    return computeTiebreakerScore(b.pm, answers) - computeTiebreakerScore(a.pm, answers);
+    // Step 3: points earned on tiebreaker questions (1, 5, 10, 17, 18)
+    const tbDiff = computeTiebreakerScore(b.pm, answers) - computeTiebreakerScore(a.pm, answers);
+    if (tbDiff !== 0) return tbDiff;
+    // Step 4: deterministic final resolver — alphabetical by name (flattering blend fallback)
+    return a.pm.localeCompare(b.pm);
   });
 
   const winner = scores[0];
