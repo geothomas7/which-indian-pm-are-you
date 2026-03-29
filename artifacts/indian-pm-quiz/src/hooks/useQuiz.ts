@@ -98,8 +98,11 @@ function resolveResults(answers: Record<string, string>): QuizResult | null {
     // Step 3: points earned on tiebreaker questions
     const tbDiff = computeTiebreakerScore(b.pm, answers) - computeTiebreakerScore(a.pm, answers);
     if (tbDiff !== 0) return tbDiff;
-    // Step 4: deterministic final resolver — alphabetical by name
-    return a.pm.localeCompare(b.pm);
+    // Step 4: deterministic final resolver — tieBreakPriority list
+    const priority = quizData.tieBreakPriority as string[];
+    const ia = priority.indexOf(a.pm);
+    const ib = priority.indexOf(b.pm);
+    return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
   });
 
   const winner = scores[0];

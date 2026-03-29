@@ -8,6 +8,20 @@
     "within_points_of_winner": 3,
     "minimum_total_points": 6
   },
+  "tieBreakPriority": [
+    "Narendra Modi", "Jawaharlal Nehru", "Indira Gandhi", "Manmohan Singh",
+    "Atal Bihari Vajpayee", "Rajiv Gandhi", "P. V. Narasimha Rao",
+    "Lal Bahadur Shastri", "Gulzarilal Nanda", "I. K. Gujral",
+    "Morarji Desai", "V. P. Singh", "Charan Singh", "H. D. Deve Gowda",
+    "Chandra Shekhar"
+  ],
+  "pmNames": [
+    "Jawaharlal Nehru", "Gulzarilal Nanda", "Lal Bahadur Shastri",
+    "Indira Gandhi", "Morarji Desai", "Charan Singh", "Rajiv Gandhi",
+    "V. P. Singh", "Chandra Shekhar", "P. V. Narasimha Rao",
+    "Atal Bihari Vajpayee", "H. D. Deve Gowda", "I. K. Gujral",
+    "Manmohan Singh", "Narendra Modi"
+  ],
   "questions": [
     {
       "id": "q1",

@@ -17,7 +17,7 @@ export function QuizIntro({ onStart }: QuizIntroProps) {
           Which Indian Prime Minister Are You Most Like?
         </h1>
         <p className="quiz-intro-subtitle">
-          18 questions on leadership, values, decisions, and the kind of future you want to build.
+          24 questions on leadership, values, decisions, and the kind of future you want to build.
         </p>
 
         <Disclaimer variant="landing" />

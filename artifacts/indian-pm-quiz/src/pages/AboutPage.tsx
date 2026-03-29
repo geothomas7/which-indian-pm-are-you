@@ -15,7 +15,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
         <h2 className="info-h2">What is this?</h2>
         <p>
           "Which Indian Prime Minister Are You Most Like?" is a personality reflection quiz
-          based on broad leadership styles. It uses 18 scenario-based questions to suggest
+          based on broad leadership styles. It uses 24 scenario-based questions to suggest
           which of India's 15 Prime Ministers your answers most resemble.
         </p>
       </section>
@@ -23,8 +23,8 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       <section className="info-section">
         <h2 className="info-h2">How the scoring works</h2>
         <p>
-          Each answer gives points to a primary PM match and a secondary PM match.
-          After all 18 questions, the PM with the highest score is shown as your result.
+          Each answer gives points to one or more PM matches.
+          After all 24 questions, the PM with the highest score is shown as your result.
           A close-match card appears only when another PM scores within 3 points of the
           winner and has at least 6 total points.
         </p>
