@@ -38,7 +38,8 @@ export function ResultCard({ result, onRetake }: ResultCardProps) {
           url: shareUrl,
         });
       } catch {
-        // user cancelled native share
+        // native share failed or was cancelled — fall back to modal
+        setShowShareModal(true);
       }
     } else {
       setShowShareModal(true);
