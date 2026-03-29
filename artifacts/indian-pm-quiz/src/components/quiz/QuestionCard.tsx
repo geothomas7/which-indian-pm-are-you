@@ -2,13 +2,14 @@ import { ProgressBar } from "./ProgressBar";
 import { AnswerOption } from "./AnswerOption";
 
 interface Option {
-  key: string;
+  id: string;
   text: string;
+  scores: Record<string, number>;
 }
 
 interface Question {
-  id: number;
-  question: string;
+  id: string;
+  text: string;
   options: Option[];
 }
 
@@ -45,15 +46,15 @@ export function QuestionCard({
 
       <div className="quiz-question-card">
         <p className="quiz-question-number">Question {currentIndex + 1}</p>
-        <h2 className="quiz-question-text">{question.question}</h2>
+        <h2 className="quiz-question-text">{question.text}</h2>
 
         <div className="quiz-answers" role="group" aria-label="Answer options">
           {question.options.map((opt) => (
             <AnswerOption
-              key={opt.key}
-              optionKey={opt.key}
+              key={opt.id}
+              optionKey={opt.id}
               text={opt.text}
-              selected={selectedOption === opt.key}
+              selected={selectedOption === opt.id}
               onSelect={onSelect}
             />
           ))}

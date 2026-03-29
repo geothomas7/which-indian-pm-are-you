@@ -1,8 +1,8 @@
 {
   "metadata": {
     "title": "Which Indian Prime Minister Are You Most Like?",
-    "question_count": 18,
-    "scoring_model": "Each answer gives 2 points to a primary PM and 1 point to a secondary PM."
+    "question_count": 24,
+    "scoring_model": "Each answer gives points directly to one or more PMs, embedded in each option."
   },
   "display_rules": {
     "within_points_of_winner": 3,
@@ -10,259 +10,245 @@
   },
   "questions": [
     {
-      "id": 1,
-      "question": "The country is going through a hard time. What do you do first?",
+      "id": "q1",
+      "text": "The country is going through a hard time. What do you do first?",
       "options": [
-        { "key": "A", "text": "Speak to the people and try to give them hope." },
-        { "key": "B", "text": "Take quick action and show strong control." },
-        { "key": "C", "text": "Talk to different people and build agreement first." },
-        { "key": "D", "text": "Use the moment to inspire people with a bigger goal." }
+        { "id": "a", "text": "Speak to the people and try to give them hope.", "scores": { "Lal Bahadur Shastri": 2, "Jawaharlal Nehru": 1 } },
+        { "id": "b", "text": "Take quick action and show strong control.", "scores": { "Indira Gandhi": 2, "Narendra Modi": 1 } },
+        { "id": "c", "text": "Talk to different people and build agreement first.", "scores": { "Atal Bihari Vajpayee": 2, "I. K. Gujral": 1 } },
+        { "id": "d", "text": "Use the moment to inspire people with a bigger goal.", "scores": { "Rajiv Gandhi": 2, "Narendra Modi": 1 } }
       ]
     },
     {
-      "id": 2,
-      "question": "What makes a leader's speech powerful?",
+      "id": "q2",
+      "text": "What makes a leader's speech powerful?",
       "options": [
-        { "key": "A", "text": "A strong idea for the future." },
-        { "key": "B", "text": "Clear steps and firm direction." },
-        { "key": "C", "text": "Careful thinking and balance." },
-        { "key": "D", "text": "Words that make people feel proud and united." }
+        { "id": "a", "text": "A strong idea for the future.", "scores": { "Jawaharlal Nehru": 2, "Rajiv Gandhi": 1 } },
+        { "id": "b", "text": "Clear steps and firm direction.", "scores": { "Morarji Desai": 2, "Indira Gandhi": 1 } },
+        { "id": "c", "text": "Careful thinking and balance.", "scores": { "I. K. Gujral": 2, "Manmohan Singh": 1 } },
+        { "id": "d", "text": "Words that make people feel proud and united.", "scores": { "Atal Bihari Vajpayee": 2, "Narendra Modi": 1 } }
       ]
     },
     {
-      "id": 3,
-      "question": "A big change is needed, but many people may not like it at first. What do you do?",
+      "id": "q3",
+      "text": "A big change is needed, but many people may not like it at first. What do you do?",
       "options": [
-        { "key": "A", "text": "Go ahead if it will help the country in the long run." },
-        { "key": "B", "text": "Bring it in slowly so people can adjust." },
-        { "key": "C", "text": "First get support from others before acting." },
-        { "key": "D", "text": "Explain it as part of a bigger plan for the country." }
+        { "id": "a", "text": "Go ahead if it will help the country in the long run.", "scores": { "P. V. Narasimha Rao": 2, "Manmohan Singh": 1 } },
+        { "id": "b", "text": "Bring it in slowly so people can adjust.", "scores": { "Manmohan Singh": 2, "H. D. Deve Gowda": 1 } },
+        { "id": "c", "text": "First get support from others before acting.", "scores": { "Atal Bihari Vajpayee": 2, "I. K. Gujral": 1 } },
+        { "id": "d", "text": "Explain it as part of a bigger plan for the country.", "scores": { "Narendra Modi": 2, "Jawaharlal Nehru": 1 } }
       ]
     },
     {
-      "id": 4,
-      "question": "Which criticism would upset you the most?",
+      "id": "q4",
+      "text": "Which criticism would upset you the most?",
       "options": [
-        { "key": "A", "text": "\u201cYou had no big ideas.\u201d" },
-        { "key": "B", "text": "\u201cYou were weak when things got difficult.\u201d" },
-        { "key": "C", "text": "\u201cYou did not listen to others.\u201d" },
-        { "key": "D", "text": "\u201cYou moved too slowly.\u201d" }
+        { "id": "a", "text": "\u201cYou had no big ideas.\u201d", "scores": { "Rajiv Gandhi": 2, "Jawaharlal Nehru": 1 } },
+        { "id": "b", "text": "\u201cYou were weak when things got difficult.\u201d", "scores": { "Chandra Shekhar": 2, "Indira Gandhi": 1 } },
+        { "id": "c", "text": "\u201cYou did not listen to others.\u201d", "scores": { "I. K. Gujral": 2, "Atal Bihari Vajpayee": 1 } },
+        { "id": "d", "text": "\u201cYou moved too slowly.\u201d", "scores": { "Narendra Modi": 2, "Rajiv Gandhi": 1 } }
       ]
     },
     {
-      "id": 5,
-      "question": "What kind of legacy would you want most?",
+      "id": "q5",
+      "text": "What kind of legacy would you want most?",
       "options": [
-        { "key": "A", "text": "Building strong national institutions." },
-        { "key": "B", "text": "Growing the economy and creating new chances." },
-        { "key": "C", "text": "Making people feel proud of the nation." },
-        { "key": "D", "text": "Keeping the country steady in difficult times." }
+        { "id": "a", "text": "Building strong national institutions.", "scores": { "Jawaharlal Nehru": 2, "Gulzarilal Nanda": 1 } },
+        { "id": "b", "text": "Growing the economy and creating new chances.", "scores": { "Manmohan Singh": 2, "P. V. Narasimha Rao": 1 } },
+        { "id": "c", "text": "Making people feel proud of the nation.", "scores": { "Atal Bihari Vajpayee": 2, "Narendra Modi": 1 } },
+        { "id": "d", "text": "Keeping the country steady in difficult times.", "scores": { "Gulzarilal Nanda": 2, "Lal Bahadur Shastri": 1 } }
       ]
     },
     {
-      "id": 6,
-      "question": "When choosing your team, what matters most?",
+      "id": "q6",
+      "text": "When choosing your team, what matters most?",
       "options": [
-        { "key": "A", "text": "Skill and knowledge." },
-        { "key": "B", "text": "Loyalty and discipline." },
-        { "key": "C", "text": "Bringing in different groups and viewpoints." },
-        { "key": "D", "text": "Energy and bold thinking." }
+        { "id": "a", "text": "Skill and knowledge.", "scores": { "Manmohan Singh": 2, "Jawaharlal Nehru": 1 } },
+        { "id": "b", "text": "Loyalty and discipline.", "scores": { "Indira Gandhi": 2, "Morarji Desai": 1 } },
+        { "id": "c", "text": "Bringing in different groups and viewpoints.", "scores": { "H. D. Deve Gowda": 2, "Atal Bihari Vajpayee": 1 } },
+        { "id": "d", "text": "Energy and bold thinking.", "scores": { "Rajiv Gandhi": 2, "Narendra Modi": 1 } }
       ]
     },
     {
-      "id": 7,
-      "question": "How should India deal with powerful other countries?",
+      "id": "q7",
+      "text": "How should India deal with powerful other countries?",
       "options": [
-        { "key": "A", "text": "Stay independent and think long term." },
-        { "key": "B", "text": "Make practical deals that help India." },
-        { "key": "C", "text": "Show strength so India is respected." },
-        { "key": "D", "text": "Build partnerships that help national growth." }
+        { "id": "a", "text": "Stay independent and think long term.", "scores": { "Jawaharlal Nehru": 2, "I. K. Gujral": 1 } },
+        { "id": "b", "text": "Make practical deals that help India.", "scores": { "P. V. Narasimha Rao": 2, "Manmohan Singh": 1 } },
+        { "id": "c", "text": "Show strength so India is respected.", "scores": { "Indira Gandhi": 2, "Narendra Modi": 1 } },
+        { "id": "d", "text": "Build partnerships that help national growth.", "scores": { "Manmohan Singh": 2, "Rajiv Gandhi": 1 } }
       ]
     },
     {
-      "id": 8,
-      "question": "How should a leader deal with people who disagree?",
+      "id": "q8",
+      "text": "How should a leader deal with people who disagree?",
       "options": [
-        { "key": "A", "text": "Let them speak, even if it is difficult." },
-        { "key": "B", "text": "Listen, but do not let them stop progress." },
-        { "key": "C", "text": "Accept helpful criticism, but stop harmful disorder." },
-        { "key": "D", "text": "Answer them openly and win the argument." }
+        { "id": "a", "text": "Let them speak, even if it is difficult.", "scores": { "I. K. Gujral": 2, "Atal Bihari Vajpayee": 1 } },
+        { "id": "b", "text": "Listen, but do not let them stop progress.", "scores": { "P. V. Narasimha Rao": 2, "Narendra Modi": 1 } },
+        { "id": "c", "text": "Accept helpful criticism, but stop harmful disorder.", "scores": { "Morarji Desai": 2, "Indira Gandhi": 1 } },
+        { "id": "d", "text": "Answer them openly and win the argument.", "scores": { "Atal Bihari Vajpayee": 2, "Rajiv Gandhi": 1 } }
       ]
     },
     {
-      "id": 9,
-      "question": "Which line sounds most like you?",
+      "id": "q9",
+      "text": "Which line sounds most like you?",
       "options": [
-        { "key": "A", "text": "I like building systems that last." },
-        { "key": "B", "text": "I like getting things done fast." },
-        { "key": "C", "text": "I like connecting with large numbers of people." },
-        { "key": "D", "text": "I like thinking deeply before acting." }
+        { "id": "a", "text": "I like building systems that last.", "scores": { "Jawaharlal Nehru": 2, "Manmohan Singh": 1 } },
+        { "id": "b", "text": "I like getting things done fast.", "scores": { "Narendra Modi": 2, "Indira Gandhi": 1 } },
+        { "id": "c", "text": "I like connecting with large numbers of people.", "scores": { "Narendra Modi": 2, "Atal Bihari Vajpayee": 1 } },
+        { "id": "d", "text": "I like thinking deeply before acting.", "scores": { "P. V. Narasimha Rao": 2, "Manmohan Singh": 1 } }
       ]
     },
     {
-      "id": 10,
-      "question": "The economy is weak. What is your first focus?",
+      "id": "q10",
+      "text": "The economy is weak. What is your first focus?",
       "options": [
-        { "key": "A", "text": "Long-term reforms." },
-        { "key": "B", "text": "Help for ordinary people right away." },
-        { "key": "C", "text": "Big development projects people can see." },
-        { "key": "D", "text": "Better planning and smoother government work." }
+        { "id": "a", "text": "Long-term reforms.", "scores": { "P. V. Narasimha Rao": 2, "Manmohan Singh": 1 } },
+        { "id": "b", "text": "Help for ordinary people right away.", "scores": { "Charan Singh": 2, "Lal Bahadur Shastri": 1 } },
+        { "id": "c", "text": "Big development projects people can see.", "scores": { "Rajiv Gandhi": 2, "Narendra Modi": 1 } },
+        { "id": "d", "text": "Better planning and smoother government work.", "scores": { "Manmohan Singh": 2, "Morarji Desai": 1 } }
       ]
     },
     {
-      "id": 11,
-      "question": "How do you make tough decisions?",
+      "id": "q11",
+      "text": "How do you make tough decisions?",
       "options": [
-        { "key": "A", "text": "I think deeply and ask others for advice." },
-        { "key": "B", "text": "I decide quickly and trust my judgment." },
-        { "key": "C", "text": "I look at facts and expert views." },
-        { "key": "D", "text": "I think about what the public will support." }
+        { "id": "a", "text": "I think deeply and ask others for advice.", "scores": { "I. K. Gujral": 2, "Atal Bihari Vajpayee": 1 } },
+        { "id": "b", "text": "I decide quickly and trust my judgment.", "scores": { "Indira Gandhi": 2, "Narendra Modi": 1 } },
+        { "id": "c", "text": "I look at facts and expert views.", "scores": { "Manmohan Singh": 2, "P. V. Narasimha Rao": 1 } },
+        { "id": "d", "text": "I think about what the public will support.", "scores": { "V. P. Singh": 2, "Charan Singh": 1 } }
       ]
     },
     {
-      "id": 12,
-      "question": "What holds a country together best?",
+      "id": "q12",
+      "text": "What holds a country together best?",
       "options": [
-        { "key": "A", "text": "Strong democratic institutions." },
-        { "key": "B", "text": "Shared culture and identity." },
-        { "key": "C", "text": "Equal chance to grow and succeed." },
-        { "key": "D", "text": "Working together for a common goal." }
+        { "id": "a", "text": "Strong democratic institutions.", "scores": { "Gulzarilal Nanda": 2, "Jawaharlal Nehru": 1 } },
+        { "id": "b", "text": "Shared culture and identity.", "scores": { "Atal Bihari Vajpayee": 2, "Narendra Modi": 1 } },
+        { "id": "c", "text": "Equal chance to grow and succeed.", "scores": { "Manmohan Singh": 2, "Rajiv Gandhi": 1 } },
+        { "id": "d", "text": "Working together for a common goal.", "scores": { "Lal Bahadur Shastri": 2, "H. D. Deve Gowda": 1 } }
       ]
     },
     {
-      "id": 13,
-      "question": "People are demanding fast social change. What do you do?",
+      "id": "q13",
+      "text": "People are demanding fast social change. What do you do?",
       "options": [
-        { "key": "A", "text": "Support change, but through proper systems." },
-        { "key": "B", "text": "Lead the change boldly." },
-        { "key": "C", "text": "Move carefully so the country does not split." },
-        { "key": "D", "text": "Keep order and accept only what is practical." }
+        { "id": "a", "text": "Support change, but through proper systems.", "scores": { "V. P. Singh": 2, "Jawaharlal Nehru": 1 } },
+        { "id": "b", "text": "Lead the change boldly.", "scores": { "Rajiv Gandhi": 2, "Narendra Modi": 1 } },
+        { "id": "c", "text": "Move carefully so the country does not split.", "scores": { "Atal Bihari Vajpayee": 2, "I. K. Gujral": 1 } },
+        { "id": "d", "text": "Keep order and accept only what is practical.", "scores": { "Morarji Desai": 2, "Indira Gandhi": 1 } }
       ]
     },
     {
-      "id": 14,
-      "question": "Which quality matters most in leadership?",
+      "id": "q14",
+      "text": "Which quality matters most in leadership?",
       "options": [
-        { "key": "A", "text": "Vision" },
-        { "key": "B", "text": "Discipline" },
-        { "key": "C", "text": "Practical thinking" },
-        { "key": "D", "text": "Charisma" }
+        { "id": "a", "text": "Vision", "scores": { "Jawaharlal Nehru": 2, "Rajiv Gandhi": 1 } },
+        { "id": "b", "text": "Discipline", "scores": { "Morarji Desai": 2, "Indira Gandhi": 1 } },
+        { "id": "c", "text": "Practical thinking", "scores": { "P. V. Narasimha Rao": 2, "Manmohan Singh": 1 } },
+        { "id": "d", "text": "Charisma", "scores": { "Narendra Modi": 2, "Atal Bihari Vajpayee": 1 } }
       ]
     },
     {
-      "id": 15,
-      "question": "What would your critics most likely say?",
+      "id": "q15",
+      "text": "What would your critics most likely say?",
       "options": [
-        { "key": "A", "text": "You dream too much." },
-        { "key": "B", "text": "You control too much." },
-        { "key": "C", "text": "You are too careful." },
-        { "key": "D", "text": "You think too much about politics." }
+        { "id": "a", "text": "You dream too much.", "scores": { "Rajiv Gandhi": 2, "Jawaharlal Nehru": 1 } },
+        { "id": "b", "text": "You control too much.", "scores": { "Indira Gandhi": 2, "Narendra Modi": 1 } },
+        { "id": "c", "text": "You are too careful.", "scores": { "Manmohan Singh": 2, "P. V. Narasimha Rao": 1 } },
+        { "id": "d", "text": "You think too much about politics.", "scores": { "Chandra Shekhar": 2, "V. P. Singh": 1 } }
       ]
     },
     {
-      "id": 16,
-      "question": "In a national crisis, what do you rely on most?",
+      "id": "q16",
+      "text": "In a national crisis, what do you rely on most?",
       "options": [
-        { "key": "A", "text": "My beliefs and values." },
-        { "key": "B", "text": "Firm control and order." },
-        { "key": "C", "text": "Public trust." },
-        { "key": "D", "text": "Support from many groups." }
+        { "id": "a", "text": "My beliefs and values.", "scores": { "Gulzarilal Nanda": 2, "Lal Bahadur Shastri": 1 } },
+        { "id": "b", "text": "Firm control and order.", "scores": { "Indira Gandhi": 2, "Narendra Modi": 1 } },
+        { "id": "c", "text": "Public trust.", "scores": { "Atal Bihari Vajpayee": 2, "Lal Bahadur Shastri": 1 } },
+        { "id": "d", "text": "Support from many groups.", "scores": { "H. D. Deve Gowda": 2, "I. K. Gujral": 1 } }
       ]
     },
     {
-      "id": 17,
-      "question": "Which national goal excites you most?",
+      "id": "q17",
+      "text": "Which national goal excites you most?",
       "options": [
-        { "key": "A", "text": "Building a modern and strong state." },
-        { "key": "B", "text": "Helping ordinary people live better." },
-        { "key": "C", "text": "Making the nation more confident and united." },
-        { "key": "D", "text": "Changing old systems to help growth." }
+        { "id": "a", "text": "Building a modern and strong state.", "scores": { "Jawaharlal Nehru": 2, "Rajiv Gandhi": 1 } },
+        { "id": "b", "text": "Helping ordinary people live better.", "scores": { "Charan Singh": 2, "Lal Bahadur Shastri": 1 } },
+        { "id": "c", "text": "Making the nation more confident and united.", "scores": { "Narendra Modi": 2, "Atal Bihari Vajpayee": 1 } },
+        { "id": "d", "text": "Changing old systems to help growth.", "scores": { "P. V. Narasimha Rao": 2, "Manmohan Singh": 1 } }
       ]
     },
     {
-      "id": 18,
-      "question": "What is the main job of a prime minister?",
+      "id": "q18",
+      "text": "What is the main job of a prime minister?",
       "options": [
-        { "key": "A", "text": "Show the country where to go." },
-        { "key": "B", "text": "Run the government well." },
-        { "key": "C", "text": "Represent the hopes of the people." },
-        { "key": "D", "text": "Keep different forces in balance." }
+        { "id": "a", "text": "Show the country where to go.", "scores": { "Jawaharlal Nehru": 2, "Narendra Modi": 1 } },
+        { "id": "b", "text": "Run the government well.", "scores": { "Morarji Desai": 2, "Manmohan Singh": 1 } },
+        { "id": "c", "text": "Represent the hopes of the people.", "scores": { "V. P. Singh": 2, "Rajiv Gandhi": 1 } },
+        { "id": "d", "text": "Keep different forces in balance.", "scores": { "Atal Bihari Vajpayee": 2, "I. K. Gujral": 1 } }
+      ]
+    },
+    {
+      "id": "q19",
+      "text": "A government suddenly loses its main leader. What matters most in the next few days?",
+      "options": [
+        { "id": "a", "text": "Keeping the system calm and stable.", "scores": { "Gulzarilal Nanda": 2, "Lal Bahadur Shastri": 1 } },
+        { "id": "b", "text": "Reassuring people with honesty and dignity.", "scores": { "Lal Bahadur Shastri": 2, "Gulzarilal Nanda": 1 } },
+        { "id": "c", "text": "Making sure rules are followed properly.", "scores": { "Morarji Desai": 2, "Gulzarilal Nanda": 1 } },
+        { "id": "d", "text": "Preventing panic while keeping dialogue open.", "scores": { "I. K. Gujral": 2, "Atal Bihari Vajpayee": 1 } }
+      ]
+    },
+    {
+      "id": "q20",
+      "text": "Which problem would you feel most strongly called to fix?",
+      "options": [
+        { "id": "a", "text": "Unfair treatment of farmers and rural families.", "scores": { "Charan Singh": 2, "H. D. Deve Gowda": 1 } },
+        { "id": "b", "text": "The neglect of villages and basic livelihoods.", "scores": { "H. D. Deve Gowda": 2, "Charan Singh": 1 } },
+        { "id": "c", "text": "A system that feels unfair to ordinary communities.", "scores": { "V. P. Singh": 2, "Charan Singh": 1 } },
+        { "id": "d", "text": "A political culture that lacks courage and candor.", "scores": { "Chandra Shekhar": 2, "V. P. Singh": 1 } }
+      ]
+    },
+    {
+      "id": "q21",
+      "text": "Which kind of respect matters most to you?",
+      "options": [
+        { "id": "a", "text": "Being trusted in a difficult transition.", "scores": { "Gulzarilal Nanda": 2, "I. K. Gujral": 1 } },
+        { "id": "b", "text": "Being seen as honest, modest, and dependable.", "scores": { "Lal Bahadur Shastri": 2, "Gulzarilal Nanda": 1 } },
+        { "id": "c", "text": "Being known as someone who stands up for rural India.", "scores": { "Charan Singh": 2, "H. D. Deve Gowda": 1 } },
+        { "id": "d", "text": "Being valued for staying close to people on the ground.", "scores": { "H. D. Deve Gowda": 2, "Charan Singh": 1 } }
+      ]
+    },
+    {
+      "id": "q22",
+      "text": "Which leadership flaw bothers you most?",
+      "options": [
+        { "id": "a", "text": "Waste, excess, and lack of discipline.", "scores": { "Morarji Desai": 2, "Manmohan Singh": 1 } },
+        { "id": "b", "text": "Ignoring unfairness because it is politically convenient.", "scores": { "V. P. Singh": 2, "Chandra Shekhar": 1 } },
+        { "id": "c", "text": "Turning disagreement into conflict instead of diplomacy.", "scores": { "I. K. Gujral": 2, "Atal Bihari Vajpayee": 1 } },
+        { "id": "d", "text": "Saying safe things instead of hard truths.", "scores": { "Chandra Shekhar": 2, "Morarji Desai": 1 } }
+      ]
+    },
+    {
+      "id": "q23",
+      "text": "What kind of strength do you admire most?",
+      "options": [
+        { "id": "a", "text": "Quiet service without show.", "scores": { "Lal Bahadur Shastri": 2, "Gulzarilal Nanda": 1 } },
+        { "id": "b", "text": "Courage rooted in the lives of ordinary people.", "scores": { "Charan Singh": 2, "Lal Bahadur Shastri": 1 } },
+        { "id": "c", "text": "Steadiness when history suddenly changes course.", "scores": { "Gulzarilal Nanda": 2, "I. K. Gujral": 1 } },
+        { "id": "d", "text": "Discipline that does not bend under pressure.", "scores": { "Indira Gandhi": 2, "Morarji Desai": 1 } }
+      ]
+    },
+    {
+      "id": "q24",
+      "text": "What kind of politics feels healthiest for India?",
+      "options": [
+        { "id": "a", "text": "Politics that begins with the farmer and the village.", "scores": { "H. D. Deve Gowda": 2, "Charan Singh": 1 } },
+        { "id": "b", "text": "Politics that keeps fairness on the national agenda.", "scores": { "V. P. Singh": 2, "Gulzarilal Nanda": 1 } },
+        { "id": "c", "text": "Politics that uses dialogue before confrontation.", "scores": { "I. K. Gujral": 2, "Atal Bihari Vajpayee": 1 } },
+        { "id": "d", "text": "Politics that is independent, bold, and unafraid.", "scores": { "Chandra Shekhar": 2, "Morarji Desai": 1 } }
       ]
     }
-  ],
-  "scoring_matrix": [
-    { "question_id": 1, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "Lal Bahadur Shastri", "secondary_points": 1 },
-    { "question_id": 1, "option": "B", "primary_pm": "Indira Gandhi", "primary_points": 2, "secondary_pm": "Narendra Modi", "secondary_points": 1 },
-    { "question_id": 1, "option": "C", "primary_pm": "Atal Bihari Vajpayee", "primary_points": 2, "secondary_pm": "I. K. Gujral", "secondary_points": 1 },
-    { "question_id": 1, "option": "D", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "Rajiv Gandhi", "secondary_points": 1 },
-    { "question_id": 2, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "Rajiv Gandhi", "secondary_points": 1 },
-    { "question_id": 2, "option": "B", "primary_pm": "Indira Gandhi", "primary_points": 2, "secondary_pm": "Morarji Desai", "secondary_points": 1 },
-    { "question_id": 2, "option": "C", "primary_pm": "Manmohan Singh", "primary_points": 2, "secondary_pm": "I. K. Gujral", "secondary_points": 1 },
-    { "question_id": 2, "option": "D", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "Atal Bihari Vajpayee", "secondary_points": 1 },
-    { "question_id": 3, "option": "A", "primary_pm": "P. V. Narasimha Rao", "primary_points": 2, "secondary_pm": "Manmohan Singh", "secondary_points": 1 },
-    { "question_id": 3, "option": "B", "primary_pm": "Manmohan Singh", "primary_points": 2, "secondary_pm": "H. D. Deve Gowda", "secondary_points": 1 },
-    { "question_id": 3, "option": "C", "primary_pm": "Atal Bihari Vajpayee", "primary_points": 2, "secondary_pm": "I. K. Gujral", "secondary_points": 1 },
-    { "question_id": 3, "option": "D", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "Jawaharlal Nehru", "secondary_points": 1 },
-    { "question_id": 4, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "Rajiv Gandhi", "secondary_points": 1 },
-    { "question_id": 4, "option": "B", "primary_pm": "Indira Gandhi", "primary_points": 2, "secondary_pm": "Chandra Shekhar", "secondary_points": 1 },
-    { "question_id": 4, "option": "C", "primary_pm": "Atal Bihari Vajpayee", "primary_points": 2, "secondary_pm": "I. K. Gujral", "secondary_points": 1 },
-    { "question_id": 4, "option": "D", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "Rajiv Gandhi", "secondary_points": 1 },
-    { "question_id": 5, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "Gulzarilal Nanda", "secondary_points": 1 },
-    { "question_id": 5, "option": "B", "primary_pm": "Manmohan Singh", "primary_points": 2, "secondary_pm": "P. V. Narasimha Rao", "secondary_points": 1 },
-    { "question_id": 5, "option": "C", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "Atal Bihari Vajpayee", "secondary_points": 1 },
-    { "question_id": 5, "option": "D", "primary_pm": "Lal Bahadur Shastri", "primary_points": 2, "secondary_pm": "I. K. Gujral", "secondary_points": 1 },
-    { "question_id": 6, "option": "A", "primary_pm": "Manmohan Singh", "primary_points": 2, "secondary_pm": "Jawaharlal Nehru", "secondary_points": 1 },
-    { "question_id": 6, "option": "B", "primary_pm": "Indira Gandhi", "primary_points": 2, "secondary_pm": "Morarji Desai", "secondary_points": 1 },
-    { "question_id": 6, "option": "C", "primary_pm": "Atal Bihari Vajpayee", "primary_points": 2, "secondary_pm": "H. D. Deve Gowda", "secondary_points": 1 },
-    { "question_id": 6, "option": "D", "primary_pm": "Rajiv Gandhi", "primary_points": 2, "secondary_pm": "Narendra Modi", "secondary_points": 1 },
-    { "question_id": 7, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "I. K. Gujral", "secondary_points": 1 },
-    { "question_id": 7, "option": "B", "primary_pm": "P. V. Narasimha Rao", "primary_points": 2, "secondary_pm": "Manmohan Singh", "secondary_points": 1 },
-    { "question_id": 7, "option": "C", "primary_pm": "Indira Gandhi", "primary_points": 2, "secondary_pm": "Narendra Modi", "secondary_points": 1 },
-    { "question_id": 7, "option": "D", "primary_pm": "Manmohan Singh", "primary_points": 2, "secondary_pm": "Rajiv Gandhi", "secondary_points": 1 },
-    { "question_id": 8, "option": "A", "primary_pm": "I. K. Gujral", "primary_points": 2, "secondary_pm": "Atal Bihari Vajpayee", "secondary_points": 1 },
-    { "question_id": 8, "option": "B", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "P. V. Narasimha Rao", "secondary_points": 1 },
-    { "question_id": 8, "option": "C", "primary_pm": "Indira Gandhi", "primary_points": 2, "secondary_pm": "Morarji Desai", "secondary_points": 1 },
-    { "question_id": 8, "option": "D", "primary_pm": "Atal Bihari Vajpayee", "primary_points": 2, "secondary_pm": "Rajiv Gandhi", "secondary_points": 1 },
-    { "question_id": 9, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "Manmohan Singh", "secondary_points": 1 },
-    { "question_id": 9, "option": "B", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "Indira Gandhi", "secondary_points": 1 },
-    { "question_id": 9, "option": "C", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "Atal Bihari Vajpayee", "secondary_points": 1 },
-    { "question_id": 9, "option": "D", "primary_pm": "P. V. Narasimha Rao", "primary_points": 2, "secondary_pm": "Manmohan Singh", "secondary_points": 1 },
-    { "question_id": 10, "option": "A", "primary_pm": "P. V. Narasimha Rao", "primary_points": 2, "secondary_pm": "Manmohan Singh", "secondary_points": 1 },
-    { "question_id": 10, "option": "B", "primary_pm": "Lal Bahadur Shastri", "primary_points": 2, "secondary_pm": "Charan Singh", "secondary_points": 1 },
-    { "question_id": 10, "option": "C", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "Rajiv Gandhi", "secondary_points": 1 },
-    { "question_id": 10, "option": "D", "primary_pm": "Manmohan Singh", "primary_points": 2, "secondary_pm": "Morarji Desai", "secondary_points": 1 },
-    { "question_id": 11, "option": "A", "primary_pm": "I. K. Gujral", "primary_points": 2, "secondary_pm": "Atal Bihari Vajpayee", "secondary_points": 1 },
-    { "question_id": 11, "option": "B", "primary_pm": "Indira Gandhi", "primary_points": 2, "secondary_pm": "Narendra Modi", "secondary_points": 1 },
-    { "question_id": 11, "option": "C", "primary_pm": "Manmohan Singh", "primary_points": 2, "secondary_pm": "P. V. Narasimha Rao", "secondary_points": 1 },
-    { "question_id": 11, "option": "D", "primary_pm": "V. P. Singh", "primary_points": 2, "secondary_pm": "Charan Singh", "secondary_points": 1 },
-    { "question_id": 12, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "Gulzarilal Nanda", "secondary_points": 1 },
-    { "question_id": 12, "option": "B", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "Atal Bihari Vajpayee", "secondary_points": 1 },
-    { "question_id": 12, "option": "C", "primary_pm": "Manmohan Singh", "primary_points": 2, "secondary_pm": "Rajiv Gandhi", "secondary_points": 1 },
-    { "question_id": 12, "option": "D", "primary_pm": "Lal Bahadur Shastri", "primary_points": 2, "secondary_pm": "H. D. Deve Gowda", "secondary_points": 1 },
-    { "question_id": 13, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "Manmohan Singh", "secondary_points": 1 },
-    { "question_id": 13, "option": "B", "primary_pm": "Rajiv Gandhi", "primary_points": 2, "secondary_pm": "Narendra Modi", "secondary_points": 1 },
-    { "question_id": 13, "option": "C", "primary_pm": "Atal Bihari Vajpayee", "primary_points": 2, "secondary_pm": "I. K. Gujral", "secondary_points": 1 },
-    { "question_id": 13, "option": "D", "primary_pm": "Morarji Desai", "primary_points": 2, "secondary_pm": "Indira Gandhi", "secondary_points": 1 },
-    { "question_id": 14, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "Rajiv Gandhi", "secondary_points": 1 },
-    { "question_id": 14, "option": "B", "primary_pm": "Morarji Desai", "primary_points": 2, "secondary_pm": "Indira Gandhi", "secondary_points": 1 },
-    { "question_id": 14, "option": "C", "primary_pm": "P. V. Narasimha Rao", "primary_points": 2, "secondary_pm": "Manmohan Singh", "secondary_points": 1 },
-    { "question_id": 14, "option": "D", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "Atal Bihari Vajpayee", "secondary_points": 1 },
-    { "question_id": 15, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "Rajiv Gandhi", "secondary_points": 1 },
-    { "question_id": 15, "option": "B", "primary_pm": "Indira Gandhi", "primary_points": 2, "secondary_pm": "Narendra Modi", "secondary_points": 1 },
-    { "question_id": 15, "option": "C", "primary_pm": "Manmohan Singh", "primary_points": 2, "secondary_pm": "P. V. Narasimha Rao", "secondary_points": 1 },
-    { "question_id": 15, "option": "D", "primary_pm": "V. P. Singh", "primary_points": 2, "secondary_pm": "Chandra Shekhar", "secondary_points": 1 },
-    { "question_id": 16, "option": "A", "primary_pm": "Lal Bahadur Shastri", "primary_points": 2, "secondary_pm": "Gulzarilal Nanda", "secondary_points": 1 },
-    { "question_id": 16, "option": "B", "primary_pm": "Indira Gandhi", "primary_points": 2, "secondary_pm": "Narendra Modi", "secondary_points": 1 },
-    { "question_id": 16, "option": "C", "primary_pm": "Atal Bihari Vajpayee", "primary_points": 2, "secondary_pm": "Lal Bahadur Shastri", "secondary_points": 1 },
-    { "question_id": 16, "option": "D", "primary_pm": "H. D. Deve Gowda", "primary_points": 2, "secondary_pm": "I. K. Gujral", "secondary_points": 1 },
-    { "question_id": 17, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "Rajiv Gandhi", "secondary_points": 1 },
-    { "question_id": 17, "option": "B", "primary_pm": "Lal Bahadur Shastri", "primary_points": 2, "secondary_pm": "Charan Singh", "secondary_points": 1 },
-    { "question_id": 17, "option": "C", "primary_pm": "Narendra Modi", "primary_points": 2, "secondary_pm": "Atal Bihari Vajpayee", "secondary_points": 1 },
-    { "question_id": 17, "option": "D", "primary_pm": "P. V. Narasimha Rao", "primary_points": 2, "secondary_pm": "Manmohan Singh", "secondary_points": 1 },
-    { "question_id": 18, "option": "A", "primary_pm": "Jawaharlal Nehru", "primary_points": 2, "secondary_pm": "Narendra Modi", "secondary_points": 1 },
-    { "question_id": 18, "option": "B", "primary_pm": "Manmohan Singh", "primary_points": 2, "secondary_pm": "Morarji Desai", "secondary_points": 1 },
-    { "question_id": 18, "option": "C", "primary_pm": "Rajiv Gandhi", "primary_points": 2, "secondary_pm": "V. P. Singh", "secondary_points": 1 },
-    { "question_id": 18, "option": "D", "primary_pm": "Atal Bihari Vajpayee", "primary_points": 2, "secondary_pm": "I. K. Gujral", "secondary_points": 1 }
   ],
   "results": [
     {

@@ -16,14 +16,14 @@ export interface QuizResult {
 
 const STORAGE_ANSWERS_KEY = "indian_pm_quiz_answers";
 const STORAGE_STATE_KEY = "indian_pm_quiz_state";
-const TIE_BREAKER_QUESTIONS = [1, 5, 10, 17, 18];
+const TIE_BREAKER_QUESTIONS = ["q1", "q5", "q10", "q17", "q18"];
 
 interface PersistedState {
   screen: QuizScreen;
   currentIndex: number;
 }
 
-function loadSavedAnswers(): Record<number, string> {
+function loadSavedAnswers(): Record<string, string> {
   try {
     const raw = localStorage.getItem(STORAGE_ANSWERS_KEY);
     if (raw) return JSON.parse(raw);
@@ -43,20 +43,25 @@ function loadSavedState(): PersistedState | null {
   return null;
 }
 
-function computeScores(answers: Record<number, string>): PMScore[] {
+function computeScores(answers: Record<string, string>): PMScore[] {
   const totals: Record<string, { total: number; primaryHits: number }> = {};
 
-  for (const entry of quizData.scoring_matrix) {
-    const chosenOption = answers[entry.question_id];
-    if (!chosenOption) continue;
+  for (const question of quizData.questions) {
+    const chosenOptionId = answers[question.id];
+    if (!chosenOptionId) continue;
 
-    if (chosenOption === entry.option) {
-      if (!totals[entry.primary_pm]) totals[entry.primary_pm] = { total: 0, primaryHits: 0 };
-      totals[entry.primary_pm].total += entry.primary_points;
-      totals[entry.primary_pm].primaryHits += 1;
+    const option = question.options.find((o) => o.id === chosenOptionId);
+    if (!option) continue;
 
-      if (!totals[entry.secondary_pm]) totals[entry.secondary_pm] = { total: 0, primaryHits: 0 };
-      totals[entry.secondary_pm].total += entry.secondary_points;
+    const entries = Object.entries(option.scores) as [string, number][];
+    const maxPoints = Math.max(...entries.map(([, pts]) => pts));
+
+    for (const [pm, points] of entries) {
+      if (!totals[pm]) totals[pm] = { total: 0, primaryHits: 0 };
+      totals[pm].total += points;
+      if (points === maxPoints) {
+        totals[pm].primaryHits += 1;
+      }
     }
   }
 
@@ -67,20 +72,21 @@ function computeScores(answers: Record<number, string>): PMScore[] {
   }));
 }
 
-function computeTiebreakerScore(pm: string, answers: Record<number, string>): number {
+function computeTiebreakerScore(pm: string, answers: Record<string, string>): number {
   let score = 0;
   for (const qId of TIE_BREAKER_QUESTIONS) {
-    const chosenOption = answers[qId];
-    if (!chosenOption) continue;
-    const entry = quizData.scoring_matrix.find(
-      (e) => e.question_id === qId && e.option === chosenOption && e.primary_pm === pm
-    );
-    if (entry) score += entry.primary_points;
+    const chosenOptionId = answers[qId];
+    if (!chosenOptionId) continue;
+    const question = quizData.questions.find((q) => q.id === qId);
+    if (!question) continue;
+    const option = question.options.find((o) => o.id === chosenOptionId);
+    const pts = option?.scores[pm as keyof typeof option.scores];
+    if (pts) score += pts;
   }
   return score;
 }
 
-function resolveResults(answers: Record<number, string>): QuizResult | null {
+function resolveResults(answers: Record<string, string>): QuizResult | null {
   const scores = computeScores(answers);
   if (!scores.length) return null;
 
@@ -89,10 +95,10 @@ function resolveResults(answers: Record<number, string>): QuizResult | null {
     if (b.total !== a.total) return b.total - a.total;
     // Step 2: primary-hit count (direct wins)
     if (b.primaryHits !== a.primaryHits) return b.primaryHits - a.primaryHits;
-    // Step 3: points earned on tiebreaker questions (1, 5, 10, 17, 18)
+    // Step 3: points earned on tiebreaker questions
     const tbDiff = computeTiebreakerScore(b.pm, answers) - computeTiebreakerScore(a.pm, answers);
     if (tbDiff !== 0) return tbDiff;
-    // Step 4: deterministic final resolver — alphabetical by name (flattering blend fallback)
+    // Step 4: deterministic final resolver — alphabetical by name
     return a.pm.localeCompare(b.pm);
   });
 
@@ -110,9 +116,14 @@ function resolveResults(answers: Record<number, string>): QuizResult | null {
 
 export function useQuiz() {
   const savedState = loadSavedState();
-  const [screen, setScreen] = useState<QuizScreen>(savedState?.screen ?? "intro");
+
+  // Never restore the result screen — always start from intro on a fresh load
+  const initialScreen: QuizScreen =
+    savedState?.screen === "result" ? "intro" : (savedState?.screen ?? "intro");
+
+  const [screen, setScreen] = useState<QuizScreen>(initialScreen);
   const [currentIndex, setCurrentIndex] = useState(savedState?.currentIndex ?? 0);
-  const [answers, setAnswers] = useState<Record<number, string>>(loadSavedAnswers);
+  const [answers, setAnswers] = useState<Record<string, string>>(loadSavedAnswers);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const questions = quizData.questions;
@@ -121,7 +132,7 @@ export function useQuiz() {
 
   const selectedOption = answers[currentQuestion?.id] ?? null;
 
-  const saveAnswers = useCallback((newAnswers: Record<number, string>) => {
+  const saveAnswers = useCallback((newAnswers: Record<string, string>) => {
     try {
       localStorage.setItem(STORAGE_ANSWERS_KEY, JSON.stringify(newAnswers));
     } catch {
@@ -179,18 +190,28 @@ export function useQuiz() {
 
   const startQuiz = useCallback(() => {
     const savedAnswers = loadSavedAnswers();
+    const savedScreenState = loadSavedState();
     const answeredCount = Object.keys(savedAnswers).length;
-    if (answeredCount > 0 && answeredCount < totalQuestions) {
-      const resumeIndex = answeredCount < totalQuestions ? answeredCount : 0;
-      setCurrentIndex(resumeIndex);
+
+    // Only resume if the user was actively mid-quiz with partial answers
+    if (
+      savedScreenState?.screen === "question" &&
+      answeredCount > 0 &&
+      answeredCount < totalQuestions
+    ) {
+      setCurrentIndex(answeredCount);
     } else {
+      // Fresh start — clear any stale answers
+      const cleared: Record<string, string> = {};
+      setAnswers(cleared);
+      saveAnswers(cleared);
       setCurrentIndex(0);
     }
     setScreen("question");
-  }, [totalQuestions]);
+  }, [totalQuestions, saveAnswers]);
 
   const retakeQuiz = useCallback(() => {
-    const cleared: Record<number, string> = {};
+    const cleared: Record<string, string> = {};
     setAnswers(cleared);
     saveAnswers(cleared);
     setCurrentIndex(0);
