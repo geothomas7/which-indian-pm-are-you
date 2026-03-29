@@ -198,24 +198,26 @@ export function useQuiz() {
 
   const startQuiz = useCallback(() => {
     const savedAnswers = loadSavedAnswers();
+    const savedScreenState = loadSavedState();
     const answeredCount = Object.keys(savedAnswers).length;
 
-    console.log("[Quiz] startQuiz called. savedAnswers:", savedAnswers, "answeredCount:", answeredCount, "totalQuestions:", totalQuestions);
+    console.log("[Quiz] startQuiz called. savedAnswers:", savedAnswers, "answeredCount:", answeredCount, "savedScreen:", savedScreenState?.screen, "totalQuestions:", totalQuestions);
 
-    if (answeredCount > 0 && answeredCount < totalQuestions) {
-      // Partial completion — resume from where they left off
+    // Only resume if the user was actively mid-quiz (screen="question") with partial answers
+    if (
+      savedScreenState?.screen === "question" &&
+      answeredCount > 0 &&
+      answeredCount < totalQuestions
+    ) {
       const resumeIndex = answeredCount;
       console.log(`[Quiz] Resuming from index ${resumeIndex}`);
       setCurrentIndex(resumeIndex);
     } else {
-      // Bug fix: if a prior complete quiz exists in localStorage, clear it so
-      // the user starts fresh instead of inheriting old pre-selected answers.
-      if (answeredCount >= totalQuestions) {
-        console.log("[Quiz] Prior completed quiz detected — clearing answers for fresh start");
-        const cleared: Record<number, string> = {};
-        setAnswers(cleared);
-        saveAnswers(cleared);
-      }
+      // Fresh start — clear any stale answers so old selections don't bleed in
+      console.log("[Quiz] Fresh start — clearing any stale answers");
+      const cleared: Record<number, string> = {};
+      setAnswers(cleared);
+      saveAnswers(cleared);
       setCurrentIndex(0);
     }
     setScreen("question");
